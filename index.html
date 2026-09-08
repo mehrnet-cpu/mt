@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مهدی تنه‌کار | مشاور کسب‌وکار، دیجیتال مارکتینگ و هوش مصنوعی</title>
+<meta name="description" content="مشاور کسب‌وکار و دیجیتال مارکتینگ با ۲۵ سال تجربه اجرایی. ساخت کانال فروش آنلاین مستقل، رهبری تیم دیجیتال و پیاده‌سازی هوش مصنوعی در سازمان.">
+<link rel="canonical" href="https://mehditanekar.ir/new/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="مهدی تنه‌کار | مشاور کسب‌وکار، دیجیتال مارکتینگ و هوش مصنوعی">
+<meta property="og:description" content="فروش آنلاین برندتان دارایی است، نه هزینه ماهانه.">
+<meta property="og:image" content="assets/mehdi-portrait.jpg">
+<meta property="og:locale" content="fa_IR">
+<meta name="theme-color" content="#0A2735">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap">
+<style>
+/* Organic — design-system tokens and component classes. This file is the source of truth for the system's look; retune it here and see readme.md. */
+
+
+:root {
+  --color-bg: #f5ead8;
+  --color-surface: #ebddc5;
+  --color-text: #201e1d;
+  --color-accent: #c67139;
+  --color-accent-2: #7a8a5e;
+  --color-divider: color-mix(in srgb, #201e1d 16%, transparent);
+
+  /* Tonal ramps — generated in OKLCH on one shared lightness scale, so the
+     same step of any role matches the others in visual value. */
+  --color-neutral-100: #f9f4ed;
+  --color-neutral-200: #eee7db;
+  --color-neutral-300: #dcd3c4;
+  --color-neutral-400: #c0b6a5;
+  --color-neutral-500: #a19786;
+  --color-neutral-600: #82796a;
+  --color-neutral-700: #645c50;
+  --color-neutral-800: #474238;
+  --color-neutral-900: #2e2b25;
+
+  --color-accent-100: #fff2eb;
+  --color-accent-200: #ffe1d0;
+  --color-accent-300: #ffc6a5;
+  --color-accent-400: #f6a06b;
+  --color-accent-500: #d67f48;
+  --color-accent-600: #b2622d;
+  --color-accent-700: #8c491a;
+  --color-accent-800: #643312;
+  --color-accent-900: #402310;
+
+  --color-accent-2-100: #f0fae1;
+  --color-accent-2-200: #e1eecc;
+  --color-accent-2-300: #ccdbb2;
+  --color-accent-2-400: #aebf92;
+  --color-accent-2-500: #8fa073;
+  --color-accent-2-600: #728157;
+  --color-accent-2-700: #56633f;
+  --color-accent-2-800: #3d472b;
+  --color-accent-2-900: #272e1b;
+
+  --font-heading: "Caprasimo", system-ui, sans-serif;
+  --font-heading-weight: 400;
+  --font-body: "Figtree", system-ui, sans-serif;
+
+  --space-1: 4.4px;
+  --space-2: 8.8px;
+  --space-3: 13.2px;
+  --space-4: 17.6px;
+  --space-6: 26.4px;
+  --space-8: 35.2px;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+
+  /* Elevation — derived from the ground: soft ink-tinted shadows on a
+     light theme, a hairline edge + ambient darkness on a dark one. */
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #2e2b25 14%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #2e2b25 16%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #2e2b25 22%, transparent);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }
+
+.washed{filter:saturate(0.6) contrast(0.85) brightness(1.1) opacity(0.94)}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Components — built with the tokens above. Plain CSS
+   on plain HTML: no JavaScript, no build step. Each class is documented in
+   readme.md and demonstrated in foundations/ and components/.
+   ══════════════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-size: 15px; line-height: 1.55; font-weight: 400; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 var(--space-2);
+}
+h1 { font-size: 42px; }
+h2 { font-size: 32px; }
+h3 { font-size: 25px; }
+h4 { font-size: 20px; }
+h5 { font-size: 16px; }
+h6 { font-size: 13px; }
+h6 { letter-spacing: 0.08em; text-transform: uppercase; }
+p { margin: 0 0 var(--space-3); }
+a { color: var(--color-accent); text-underline-offset: 3px; }
+img { display: block; max-width: 100%; }
+figure { margin: 0; }
+figcaption {
+  font-size: 11px; margin-top: var(--space-1);
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+}
+.text-muted { color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
+
+/* — rules — */
+.hr {
+  height: 1px; border: 0; margin: var(--space-4) 0;
+  background: var(--color-divider);
+}
+
+/* — buttons — */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  cursor: pointer; text-decoration: none;
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 14px; line-height: 1.2; color: var(--color-text); /* matches the .input's 14px —
+     the pair sits side by side in sign-up rows */
+  background: transparent; border: 1px solid transparent;
+  padding: var(--space-2) calc(var(--space-3) * 1.2);
+  border-radius: var(--radius-md);
+}
+.btn svg { display: block; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary { background: var(--color-accent); color: var(--color-bg); }
+.btn-primary:hover { background: var(--color-accent-600); }
+.btn-primary:active { background: var(--color-accent-700); }
+.btn-secondary { border-color: var(--color-divider); }
+.btn-secondary:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
+.btn-secondary:active { background: color-mix(in srgb, var(--color-text) 14%, transparent); }
+.btn-ghost { color: var(--color-accent); padding-inline: var(--space-1); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--color-accent) 10%, transparent); }
+.btn-ghost:active { background: color-mix(in srgb, var(--color-accent) 18%, transparent); }
+.btn-icon { width: 36px; height: 36px; padding: 0; }
+.btn-block { width: 100%; margin-top: var(--space-2); }
+
+/* — forms — */
+.field > label {
+  display: block; font-size: 12px; margin-bottom: 5px;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+}
+.input {
+  width: 100%; min-height: 36px; padding: 6px 10px; font: inherit;
+  font-size: 14px; color: var(--color-text); caret-color: var(--color-accent);
+  background: var(--color-surface);
+  border: 1px solid var(--color-divider); border-radius: var(--radius-md);
+}
+.input:hover { border-color: color-mix(in srgb, var(--color-text) 45%, transparent); }
+.input:focus-visible { border-color: var(--color-accent); outline-offset: 0; }
+textarea.input { min-height: 90px; resize: vertical; }
+.radio { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; }
+.radio input, .seg-opt input {
+  position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none;
+}
+.radio .dot {
+  width: 16px; height: 16px; flex: none; border-radius: 50%;
+  border: 1.5px solid var(--color-divider);
+}
+.radio:hover .dot { border-color: var(--color-accent); }
+.radio input:checked + .dot {
+  border-color: var(--color-accent); background: var(--color-accent);
+  box-shadow: inset 0 0 0 4px var(--color-bg);
+}
+.radio input:focus-visible + .dot { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.seg {
+  display: inline-flex; overflow: hidden;
+  border: 1px solid var(--color-divider); border-radius: var(--radius-md);
+}
+.seg-opt {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px; font-size: 13px; cursor: pointer;
+}
+.seg-opt + .seg-opt { border-left: 1px solid var(--color-divider); }
+.seg-opt:has(input:checked) { background: var(--color-accent); color: var(--color-bg); }
+.seg-opt:not(:has(input:checked)):hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
+.seg-opt:has(input:focus-visible) { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+
+/* — cards — */
+.card {
+  display: flex; flex-direction: column; gap: var(--space-2);
+  padding: var(--space-3); border-radius: var(--radius-md); background: var(--color-surface);
+}
+.card-kicker { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); }
+.card-title {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 17px; line-height: 1.2;
+}
+.card-body { margin: 0; font-size: 13px; opacity: 0.8; flex: 1; }
+.card-meta {
+  display: flex; align-items: center; gap: 6px; font-size: 11px;
+  color: color-mix(in srgb, var(--color-text) 50%, transparent);
+}
+.elev-sm { box-shadow: var(--shadow-sm); }
+.elev-md { box-shadow: var(--shadow-md); }
+.elev-lg { box-shadow: var(--shadow-lg); }
+
+/* — tags — */
+.tag {
+  display: inline-flex; align-items: center; font-size: 11px;
+  letter-spacing: 0.02em; padding: 3px 10px;
+  border-radius: calc(var(--radius-md) * 0.75);
+}
+.tag-accent { background: var(--color-accent-100); color: var(--color-accent-800); }
+.tag-accent-2 { background: var(--color-accent-2-100); color: var(--color-accent-2-800); }
+.tag-neutral { background: var(--color-neutral-100); color: var(--color-neutral-800); }
+.tag-outline { border: 1px solid var(--color-accent); color: var(--color-accent); }
+
+/* — navigation — */
+.nav {
+  display: flex; align-items: center; gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: none;
+}
+.nav-brand {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 18px; margin-right: auto;
+}
+.nav a { color: inherit; text-decoration: none; font-size: 14px; }
+.nav a:hover, .nav a[aria-current='page'] { color: var(--color-accent); }
+
+/* — tables — */
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th {
+  text-align: left; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-text) 60%, transparent);
+  padding: var(--space-2); border-bottom: 1px solid var(--color-divider);
+}
+.table td {
+  padding: var(--space-2);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+}
+.table tbody tr:hover { background: color-mix(in srgb, var(--color-text) 4%, transparent); }
+
+/* — dialog — */
+.dialog-backdrop {
+  position: fixed; inset: 0; display: grid; place-items: center;
+  padding: var(--space-4);
+  background: color-mix(in srgb, var(--color-neutral-900) 50%, transparent);
+}
+.dialog {
+  width: min(440px, 100%); display: flex; flex-direction: column; gap: var(--space-3);
+  padding: var(--space-4); border-radius: var(--radius-lg);
+  background: var(--color-surface); box-shadow: var(--shadow-lg);
+}
+.dialog-title {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 20px;
+}
+.dialog-body { font-size: 14px; opacity: 0.85; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: var(--space-2); margin-top: var(--space-2); }
+
+/* — rounded frame: everything softens, small controls go pill — */
+.card, .dialog { border-radius: calc(var(--radius-lg) * 1.15); }
+.btn, .tag, .seg, .input { border-radius: 999px; }
+.input { padding-inline: 14px; }
+
+
+</style>
+<style>
+:root {
+      --font-heading: "Vazirmatn", system-ui, sans-serif;
+      --font-body: "Vazirmatn", system-ui, sans-serif;
+      --font-heading-weight: 800;
+      --color-bg: #0A2735;
+      --color-surface: #0E3243;
+      --color-text: #F9F9F9;
+      --color-accent: #FF6D41;
+      --color-accent-2: #004E72;
+      --color-divider: rgba(249, 249, 249, 0.16);
+      --ink: #0A2735;
+      --dim: #A9BCC6;
+    }
+    html { direction: rtl; }
+    body { margin: 0; direction: rtl; text-align: right; background: #0A2735; color: #F9F9F9; font-size: 16px; }
+    h1, h2, h3, h4 { letter-spacing: -0.01em; line-height: 1.24; margin: 0; }
+    a { color: #FF9271; }
+    a:hover { color: #FFB79E; }
+    .a-link { color: inherit; text-decoration: none; transition: color .2s ease; }
+    .a-link:hover { color: #FF9271; }
+    .a-row { transition: background .25s ease; }
+    .a-row:hover { background: rgba(249,249,249,0.04); }
+    .a-cta { transition: transform .2s ease, background .2s ease; }
+    .a-cta:hover { background: #FF9271; transform: translateY(-2px); }
+    .a-num { direction: ltr; unicode-bidi: isolate; }
+    ::selection { background: rgba(255,109,65,0.4); }
+</style>
+</head>
+<body>
+<div dir="rtl" style="background: #0A2735; color: #F9F9F9; min-height: 100vh; overflow-x: hidden">
+
+  <header style="position: sticky; top: 0; z-index: 20; backdrop-filter: blur(14px); background: rgba(10,39,53,0.85); border-bottom: 1px solid var(--color-divider)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap">
+      <a href="#top" class="a-link" style="display: flex; align-items: baseline; gap: 10px; margin-inline-end: auto">
+        <span style="font-size: 18px; font-weight: 800">مهدی تنه‌کار</span>
+        <span style="font-size: 13px; color: var(--dim)">مشاور رشد فروش آنلاین</span>
+      </a>
+      <nav style="display: flex; align-items: center; gap: 26px; font-size: 14px; color: var(--dim); flex-wrap: wrap">
+        <a href="#questions" class="a-link">سه سؤال</a>
+        <a href="#case" class="a-link">مطالعه موردی</a>
+        <a href="#method" class="a-link">روش کار</a>
+        <a href="#record" class="a-link">سابقه</a>
+      </nav>
+      <a class="a-cta" href="https://wa.me/989126589474" style="background: #FF6D41; color: var(--ink); font-size: 14px; font-weight: 700; padding: 12px 22px; border-radius: 999px; text-decoration: none; white-space: nowrap">جلسه ۴۵ دقیقه‌ای</a>
+    </div>
+  </header>
+
+  <section id="top" style="max-width: 1280px; margin: 0 auto; padding: 92px 32px 88px; display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 64px; align-items: center">
+    <div>
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 30px">
+        <span style="width: 46px; height: 1px; background: #FF6D41"></span>
+        <span style="font-size: 13px; letter-spacing: 0.12em; color: #FF9271; font-weight: 600">مشاور کسب‌وکار · دیجیتال مارکتینگ · هوش مصنوعی</span>
+      </div>
+      <h1 style="font-size: clamp(38px, 5.6vw, 66px); font-weight: 800; line-height: 1.2; margin: 0 0 28px">فروش آنلاین برندتان<br><span style="color: #FF6D41">دارایی</span> است، نه هزینه ماهانه</h1>
+      <p style="font-size: 19px; line-height: 1.95; color: var(--dim); max-width: 46ch; margin: 0 0 38px; text-wrap: pretty">کانال فروش مستقل می‌سازیم: استراتژی، رهبری تیم دیجیتال و هوش مصنوعی در فرایندهای واقعی سازمان — با سنجش اثر روی عدد فروش.</p>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center">
+        <a class="a-cta" href="https://wa.me/989126589474" style="background: #FF6D41; color: var(--ink); font-size: 16px; font-weight: 700; padding: 17px 34px; border-radius: 999px; text-decoration: none">درخواست جلسه بدون هزینه</a>
+        <a class="a-link" href="tel:+982126422742" style="font-size: 16px; font-weight: 600; padding: 17px 26px; border: 1px solid var(--color-divider); border-radius: 999px; text-decoration: none"><span class="a-num">۰۲۱ ۲۶۴۲۲۷۴۲</span></a>
+      </div>
+    </div>
+    <div style="position: relative">
+      <div style="position: absolute; inset-block-start: -26px; inset-inline-start: -26px; width: 148px; height: 148px; border-radius: 999px; border: 1px solid rgba(255,109,65,0.5)"></div>
+      <div style="position: relative; border-radius: 32px; overflow: hidden; aspect-ratio: 4/5; box-shadow: 0 20px 50px rgba(0,0,0,0.35)">
+        <img src="assets/mehdi-portrait.jpg" alt="مهدی تنه‌کار" style="width: 100%; height: 100%; object-fit: cover">
+      </div>
+      <div style="position: absolute; inset-block-end: 26px; inset-inline-start: -22px; background: #F9F9F9; color: var(--ink); border-radius: 20px; padding: 18px 22px; box-shadow: 0 18px 40px rgba(0,0,0,0.35)">
+        <div style="font-size: 13px; color: #4E5964; margin-bottom: 4px">تجربه اجرایی</div>
+        <div style="font-size: 26px; font-weight: 800; line-height: 1.1">۲۵ سال</div>
+      </div>
+    </div>
+  </section>
+
+  <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px 92px">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 32px; border-top: 1px solid var(--color-divider)">
+      <div style="padding-top: 30px">
+        <div style="font-size: 34px; font-weight: 800; color: #FF9271; line-height: 1">۱۳۸۸</div>
+        <div style="font-size: 14px; color: var(--dim); margin-top: 10px; line-height: 1.7">تأسیس ایران‌میز — اولین فروشگاه اینترنتی مبلمان ایران</div>
+      </div>
+      <div style="padding-top: 30px">
+        <div style="font-size: 34px; font-weight: 800; color: #FF9271; line-height: 1">دو سال</div>
+        <div style="font-size: 14px; color: var(--dim); margin-top: 10px; line-height: 1.7">از صفر ترافیک تا کانال اصلی فروش جامه‌پوش آرا</div>
+      </div>
+      <div style="padding-top: 30px">
+        <div style="font-size: 34px; font-weight: 800; color: #FF9271; line-height: 1">دکترا</div>
+        <div style="font-size: 14px; color: var(--dim); margin-top: 10px; line-height: 1.7">مشاوره مدیریت · مهندس نساجی</div>
+      </div>
+      <div style="padding-top: 30px">
+        <div style="font-size: 34px; font-weight: 800; color: #FF9271; line-height: 1">۳</div>
+        <div style="font-size: 14px; color: var(--dim); margin-top: 10px; line-height: 1.7">دوره تدریس سازمانی هوش مصنوعی و دیجیتال مارکتینگ</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="questions" style="max-width: 1280px; margin: 0 auto; padding: 0 32px 100px">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; align-items: end; margin-bottom: 18px">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.12em; color: #FF9271; margin-bottom: 18px">۰۱ — سه سؤال</div>
+        <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800">اگر پاسخ هر سه را می‌دانید، به من نیازی ندارید.</h2>
+      </div>
+      <p style="font-size: 17px; line-height: 1.95; color: var(--dim); margin: 0">جواب این سه سؤال معلوم می‌کند فروش آنلاین شما یک دارایی است یا یک هزینه ماهانه.</p>
+    </div>
+    <div>
+      <div class="a-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: start; padding: 32px 0; border-top: 1px solid var(--color-divider)">
+        <h3 style="font-size: clamp(20px, 2.2vw, 26px); font-weight: 700; line-height: 1.5"><span style="color: #FF6D41; font-size: 15px; margin-inline-end: 14px">۰۱</span>اگر فردا بودجه تبلیغات را صفر کنید، چند درصد فروش‌تان می‌ماند؟</h3>
+        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">اگر پاسخ «تقریباً هیچ» است، شما ترافیک اجاره می‌کنید، نه اینکه دارایی بسازید.</p>
+      </div>
+      <div class="a-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: start; padding: 32px 0; border-top: 1px solid var(--color-divider)">
+        <h3 style="font-size: clamp(20px, 2.2vw, 26px); font-weight: 700; line-height: 1.5"><span style="color: #FF6D41; font-size: 15px; margin-inline-end: 14px">۰۲</span>چند درصد فروش شما از مارکت‌پلیس‌ها می‌آید؟</h3>
+        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">هر درصد، بخشی از حاشیه سود و کل داده مشتری است که در اختیار شما نیست.</p>
+      </div>
+      <div class="a-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: start; padding: 32px 0; border-block: 1px solid var(--color-divider)">
+        <h3 style="font-size: clamp(20px, 2.2vw, 26px); font-weight: 700; line-height: 1.5"><span style="color: #FF6D41; font-size: 15px; margin-inline-end: 14px">۰۳</span>در تیم شما کسی پاسخ‌گوی عدد فروش آنلاین است؟</h3>
+        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">مشغول کار بودن تیم، با پاسخ‌گو بودن نسبت به فروش دو چیز متفاوت است.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="case" style="background: #F9F9F9; color: var(--ink); padding: 100px 0">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px">
+      <div style="font-size: 13px; letter-spacing: 0.12em; color: #B33D1B; margin-bottom: 20px">۰۲ — مطالعه موردی</div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: start">
+        <div>
+          <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 14px">
+            <img src="assets/logo-jpa.png" alt="جامه‌پوش آرا" style="height: 62px; width: 60px; object-fit: contain">
+            <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800">جامه‌پوش آرا</h2>
+          </div>
+          <p style="font-size: 16px; color: #4E5964; margin: 0 0 30px">مشاور بازاریابی و دیجیتال مارکتینگ · ۱۴۰۲ تا امروز</p>
+          <p style="font-size: 20px; line-height: 1.85; font-weight: 600; margin: 0 0 34px; max-width: 42ch">کانال فروش آنلاین برند را در دو سال از صفر ساختیم: بدون ترافیک ارگانیک، بدون کانال فروش مستقل از مارکت‌پلیس.</p>
+          <div style="display: flex; flex-wrap: wrap; border-top: 1px solid rgba(10,39,53,0.14)">
+            <div style="padding: 20px 0; padding-inline-end: 44px">
+              <div style="font-size: 13px; color: #4E5964">نقطه شروع</div>
+              <div style="font-size: 21px; font-weight: 800; margin-top: 6px">صفر ترافیک</div>
+            </div>
+            <div style="padding: 20px 0; padding-inline-end: 44px">
+              <div style="font-size: 13px; color: #4E5964">بازه زمانی</div>
+              <div style="font-size: 21px; font-weight: 800; margin-top: 6px">دو سال</div>
+            </div>
+            <div style="padding: 20px 0">
+              <div style="font-size: 13px; color: #4E5964">امروز</div>
+              <div style="font-size: 21px; font-weight: 800; margin-top: 6px; color: #B33D1B">کانال اصلی فروش</div>
+            </div>
+          </div>
+        </div>
+        <div style="background: #ffffff; border-radius: 28px; padding: 32px; box-shadow: 0 14px 40px rgba(10,39,53,0.1)">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 10px">
+            <div style="font-size: 15px; font-weight: 700">کلیک ارگانیک — بازه ۲۴ ماهه</div>
+            <div style="font-size: 12px; color: #6E7883">نمودار شِمایی</div>
+          </div>
+          <svg viewBox="0 0 420 220" style="width: 100%; height: auto; direction: ltr" role="img" aria-label="رشد پله‌ای کلیک ارگانیک در بازه بیست‌وچهار ماهه">
+            <line x1="30" y1="185" x2="405" y2="185" stroke="rgba(10,39,53,0.16)" stroke-width="1"></line>
+            <line x1="30" y1="20" x2="30" y2="185" stroke="rgba(10,39,53,0.16)" stroke-width="1"></line>
+            <line x1="215" y1="20" x2="215" y2="185" stroke="rgba(255,109,65,0.45)" stroke-width="1" stroke-dasharray="4 5"></line>
+            <path d="M30 176 C 90 174, 140 168, 175 156 C 215 142, 250 112, 290 84 C 330 56, 370 38, 405 30 L 405 185 L 30 185 Z" fill="rgba(255,109,65,0.1)"></path>
+            <path d="M30 176 C 90 174, 140 168, 175 156 C 215 142, 250 112, 290 84 C 330 56, 370 38, 405 30" fill="none" stroke="#FF6D41" stroke-width="3.2" stroke-linecap="round"></path>
+            <circle cx="30" cy="176" r="4.5" fill="#0A2735"></circle>
+            <circle cx="215" cy="139" r="4.5" fill="#FF6D41"></circle>
+            <circle cx="405" cy="30" r="5.5" fill="#0A2735"></circle>
+          </svg>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; color: #4E5964; margin-top: 6px"><span>ماه ۱</span><span>شتاب‌گیری سئو — ماه ۱۲</span><span>ماه ۲۴</span></div>
+          <div style="margin-top: 26px; display: flex; flex-direction: column; gap: 14px">
+            <div style="display: flex; gap: 12px; align-items: flex-start">
+              <span style="width: 9px; height: 9px; border-radius: 999px; background: #FF6D41; margin-top: 8px; flex: none"></span>
+              <div style="font-size: 16px; line-height: 1.7"><span style="font-weight: 700">رشد پیوسته فروش</span> <span style="color: #4E5964">— از صفر به یکی از کانال‌های اصلی درآمد برند.</span></div>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start">
+              <span style="width: 9px; height: 9px; border-radius: 999px; background: #FF6D41; margin-top: 8px; flex: none"></span>
+              <div style="font-size: 16px; line-height: 1.7"><span style="font-weight: 700">صفحه اول گوگل</span> <span style="color: #4E5964">— روی کلمات کلیدی پرفروش دسته‌های پوشاک.</span></div>
+            </div>
+            <div style="display: flex; gap: 12px; align-items: flex-start">
+              <span style="width: 9px; height: 9px; border-radius: 999px; background: #FF6D41; margin-top: 8px; flex: none"></span>
+              <div style="font-size: 16px; line-height: 1.7"><span style="font-weight: 700">ترافیک پایدار</span> <span style="color: #4E5964">— فروشی که وابسته به بودجه روزانه نیست.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 64px">
+        <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 22px">آنچه انجام دادیم</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px">
+          <div style="border-top: 1px solid rgba(10,39,53,0.16); padding: 24px 0 0">
+            <div style="font-size: 13px; color: #B33D1B; font-weight: 700; margin-bottom: 10px">۰۱</div>
+            <div style="font-size: 17px; font-weight: 700; margin-bottom: 8px">استراتژی بازاریابی و دیجیتال</div>
+            <div style="font-size: 15px; line-height: 1.85; color: #4E5964">جایگاه برند، مخاطب و انتخاب کانال‌ها بر اساس سهم واقعی‌شان از فروش.</div>
+          </div>
+          <div style="border-top: 1px solid rgba(10,39,53,0.16); padding: 24px 0 0">
+            <div style="font-size: 13px; color: #B33D1B; font-weight: 700; margin-bottom: 10px">۰۲</div>
+            <div style="font-size: 17px; font-weight: 700; margin-bottom: 8px">رهبری و نظارت بر تیم دیجیتال</div>
+            <div style="font-size: 15px; line-height: 1.85; color: #4E5964">هدف‌گذاری، تقسیم کار و بازبینی هفتگی تیم محتوا، سئو و تبلیغات.</div>
+          </div>
+          <div style="border-top: 1px solid rgba(10,39,53,0.16); padding: 24px 0 0">
+            <div style="font-size: 13px; color: #B33D1B; font-weight: 700; margin-bottom: 10px">۰۳</div>
+            <div style="font-size: 17px; font-weight: 700; margin-bottom: 8px">معماری سئو و محتوا</div>
+            <div style="font-size: 15px; line-height: 1.85; color: #4E5964">ساختار Hub &amp; Spoke تا هر صفحه‌دسته برای کلمات پرفروش بالا بیاید.</div>
+          </div>
+          <div style="border-top: 1px solid rgba(10,39,53,0.16); padding: 24px 0 0">
+            <div style="font-size: 13px; color: #B33D1B; font-weight: 700; margin-bottom: 10px">۰۴</div>
+            <div style="font-size: 17px; font-weight: 700; margin-bottom: 8px">رهبری کمپین‌های تبلیغاتی</div>
+            <div style="font-size: 15px; line-height: 1.85; color: #4E5964">کمپین داده‌محور با سنجش بازگشت هزینه، نه خرج پراکنده در چند پلتفرم.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="diagnosis" style="max-width: 1280px; margin: 0 auto; padding: 100px 32px">
+    <div style="font-size: 13px; letter-spacing: 0.12em; color: #FF9271; margin-bottom: 20px">۰۳ — تشخیص</div>
+    <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800; max-width: 30ch; margin-bottom: 18px">چهار چیزی که رشد فروش آنلاین را متوقف می‌کند</h2>
+    <p style="font-size: 17px; line-height: 1.95; color: var(--dim); max-width: 56ch; margin: 0 0 52px">اگر دو مورد برای شما آشناست، فروش آنلاین‌تان زیر ظرفیت واقعی برند کار می‌کند. کدام‌یک گلوگاه شماست؟ در جلسه اول مشخص می‌کنیم.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px">
+      <article style="position: relative; padding: 34px 30px; border-radius: 26px; background: #0E3243; overflow: hidden">
+        <span style="display: block; font-size: 13px; font-weight: 700; color: #FF9271; margin-bottom: 14px">۰۱</span>
+        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 12px; position: relative">فروش گروگان مارکت‌پلیس‌هاست</h3>
+        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0; position: relative">حاشیه سود فشرده می‌شود، داده مشتری در اختیار شما نیست و برند دیده نمی‌شود.</p>
+      </article>
+      <article style="position: relative; padding: 34px 30px; border-radius: 26px; background: #0E3243; overflow: hidden">
+        <span style="display: block; font-size: 13px; font-weight: 700; color: #FF9271; margin-bottom: 14px">۰۲</span>
+        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 12px; position: relative">ترافیک ارگانیک نزدیک صفر</h3>
+        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0; position: relative">هر فروش با پول تبلیغات خریده می‌شود؛ بودجه قطع شود، فروش هم قطع می‌شود.</p>
+      </article>
+      <article style="position: relative; padding: 34px 30px; border-radius: 26px; background: #0E3243; overflow: hidden">
+        <span style="display: block; font-size: 13px; font-weight: 700; color: #FF9271; margin-bottom: 14px">۰۳</span>
+        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 12px; position: relative">تنوع بالای محصول، ساختار ضعیف</h3>
+        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0; position: relative">صدها کد محصول در ساختاری که نه مشتری مرور می‌کند و نه گوگل می‌فهمد.</p>
+      </article>
+      <article style="position: relative; padding: 34px 30px; border-radius: 26px; background: #0E3243; overflow: hidden">
+        <span style="display: block; font-size: 13px; font-weight: 700; color: #FF9271; margin-bottom: 14px">۰۴</span>
+        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 12px; position: relative">تیم دیجیتال بدون سکان</h3>
+        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0; position: relative">تیم مشغول کار است، اما کسی کار را به هدف فروش گره نمی‌زند.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="method" style="max-width: 1280px; margin: 0 auto; padding: 0 32px 100px">
+    <div style="font-size: 13px; letter-spacing: 0.12em; color: #FF9271; margin-bottom: 20px">۰۴ — روش کار</div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; align-items: end; margin-bottom: 56px">
+      <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800">چهار قدم تا فروش</h2>
+      <p style="font-size: 19px; line-height: 1.9; margin: 0; color: #FFB79E; font-weight: 600">جای تیم شما کار نمی‌کنم؛ به تیم جهت می‌دهم و پاسخ‌گو نگهش می‌دارم. اگر تیمی نیست، در ساختنش کنارتان هستم.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; border-top: 1px solid var(--color-divider); padding-top: 34px">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px"><span style="width: 12px; height: 12px; border-radius: 999px; background: #FF6D41"></span><span style="font-size: 13px; color: var(--dim)">قدم ۰۱</span></div>
+        <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 10px">عارضه‌یابی</h3>
+        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">گلوگاه واقعی فروش، نه علائم آن.</p>
+      </div>
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px"><span style="width: 12px; height: 12px; border-radius: 999px; background: #FF6D41"></span><span style="font-size: 13px; color: var(--dim)">قدم ۰۲</span></div>
+        <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 10px">نقشه راه</h3>
+        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">اقدام‌ها به‌ترتیب اثر روی فروش.</p>
+      </div>
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px"><span style="width: 12px; height: 12px; border-radius: 999px; background: #FF6D41"></span><span style="font-size: 13px; color: var(--dim)">قدم ۰۳</span></div>
+        <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 10px">اجرا و نظارت</h3>
+        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">هدایت تیم و اصلاح مسیر پیش از هدررفت بودجه.</p>
+      </div>
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px"><span style="width: 12px; height: 12px; border-radius: 999px; background: #FF6D41"></span><span style="font-size: 13px; color: var(--dim)">قدم ۰۴</span></div>
+        <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 10px">هوش مصنوعی</h3>
+        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">تحلیل داده و اتوماسیون محتوا برای نرخ تبدیل.</p>
+      </div>
+    </div>
+    <div style="margin-top: 44px; display: flex; gap: 14px; flex-wrap: wrap">
+      <span style="font-size: 14px; padding: 10px 18px; border-radius: 999px; border: 1px solid var(--color-divider); color: var(--dim)">تحویل: گزارش عارضه‌یابی</span>
+      <span style="font-size: 14px; padding: 10px 18px; border-radius: 999px; border: 1px solid var(--color-divider); color: var(--dim)">نقشه راه زمان‌بندی‌شده</span>
+      <span style="font-size: 14px; padding: 10px 18px; border-radius: 999px; border: 1px solid var(--color-divider); color: var(--dim)">جلسات بازبینی دوره‌ای</span>
+    </div>
+  </section>
+
+  <section id="record" style="background: #0E3243; padding: 100px 0">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 56px; align-items: start">
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.12em; color: #FF9271; margin-bottom: 20px">۰۵ — سابقه</div>
+        <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800; margin-bottom: 22px">تجربه‌ای که از صندلی مدیرعامل می‌آید، نه از اسلاید</h2>
+        <p style="font-size: 17px; line-height: 1.95; color: var(--dim); margin: 0 0 34px">کارم را از فروش آنلاین شروع کردم؛ در ۱۳۸۸ اولین فروشگاه اینترنتی مبلمان ایران را راه‌اندازی کردم و آن را تا یکی از بازیگران اصلی این صنعت رساندم. امروز همان تجربه را در قالب مشاوره به سازمان‌ها می‌دهم.</p>
+        <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap">
+          <img src="assets/logo-iranmiz.png" alt="ایران‌میز" style="height: 38px; width: 120px; object-fit: contain; opacity: 0.85">
+          <img src="assets/logo-dehban.webp" alt="آکادمی دهبان" style="height: 44px; width: 104px; object-fit: contain; opacity: 0.85">
+          <span style="font-size: 18px; font-weight: 700; color: var(--dim)">هامرز</span>
+          <span style="font-size: 18px; font-weight: 700; color: var(--dim)">مهرنت</span>
+        </div>
+      </div>
+      <div>
+        <div style="padding: 22px 0; border-top: 1px solid var(--color-divider)">
+          <div style="font-size: 19px; font-weight: 700">ایران‌میز — بنیان‌گذار و مدیرعامل</div>
+          <div style="font-size: 15px; color: var(--dim); margin-top: 8px">اولین فروشگاه اینترنتی مبلمان ایران · ۱۳۸۸ تا امروز</div>
+        </div>
+        <div style="padding: 22px 0; border-top: 1px solid var(--color-divider)">
+          <div style="font-size: 19px; font-weight: 700">آژانس دیجیتال مارکتینگ دهبان — مدیرعامل</div>
+          <div style="font-size: 15px; color: var(--dim); margin-top: 8px">۱۴۰۱ تا ۱۴۰۳</div>
+        </div>
+        <div style="padding: 22px 0; border-block: 1px solid var(--color-divider)">
+          <div style="font-size: 19px; font-weight: 700">شرکت مهرنت — مدیرعامل</div>
+          <div style="font-size: 15px; color: var(--dim); margin-top: 8px">مدرس دوره هوش مصنوعی سازمان برنامه و بودجه</div>
+        </div>
+        <div style="margin-top: 30px">
+          <div style="font-size: 15px; color: #FFB79E; font-weight: 600; margin-bottom: 12px">تدریس</div>
+          <div style="font-size: 16px; color: var(--dim); line-height: 1.95">هوش مصنوعی برای مدیران — مؤسسه ماهان<br>هوش مصنوعی — محققان سازمان برنامه و بودجه<br>دیجیتال مارکتینگ — آکادمی دهبان</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="max-width: 1280px; margin: 0 auto; padding: 100px 32px">
+    <div style="background: #FF6D41; color: var(--ink); border-radius: 36px; padding: clamp(32px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 56px; align-items: center">
+      <div>
+        <h2 style="font-size: clamp(28px, 4.2vw, 44px); font-weight: 800; margin-bottom: 20px">یک جلسه ۴۵ دقیقه‌ای، بدون هزینه</h2>
+        <p style="font-size: 18px; line-height: 1.9; margin: 0 0 32px; color: #4F160A">وضعیت فروش آنلاین برندتان را با هم مرور می‌کنیم و صادقانه می‌گویم کجا جای رشد هست و کجا نیست.</p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap">
+          <a href="https://wa.me/989126589474" style="background: #0A2735; color: #F9F9F9; font-size: 16px; font-weight: 700; padding: 17px 32px; border-radius: 999px; text-decoration: none">شروع گفت‌وگو در واتساپ</a>
+          <a href="tel:+989126589474" style="border: 1px solid rgba(10,39,53,0.45); color: var(--ink); font-size: 16px; font-weight: 700; padding: 17px 32px; border-radius: 999px; text-decoration: none"><span class="a-num">۰۹۱۲۶۵۸۹۴۷۴</span></a>
+        </div>
+      </div>
+      <div>
+        <div style="display: flex; gap: 20px; padding: 20px 0; border-top: 1px solid rgba(10,39,53,0.28)">
+          <span class="a-num" style="font-size: 18px; font-weight: 800; min-width: 4ch">۱۵′</span>
+          <span style="font-size: 17px; line-height: 1.7">مرور سایت، جایگاه سئو و کانال‌های فروش فعلی</span>
+        </div>
+        <div style="display: flex; gap: 20px; padding: 20px 0; border-top: 1px solid rgba(10,39,53,0.28)">
+          <span class="a-num" style="font-size: 18px; font-weight: 800; min-width: 4ch">۲۰′</span>
+          <span style="font-size: 17px; line-height: 1.7">دو یا سه فرصت رشد که از همین ماه شروع می‌شود</span>
+        </div>
+        <div style="display: flex; gap: 20px; padding: 20px 0; border-block: 1px solid rgba(10,39,53,0.28)">
+          <span class="a-num" style="font-size: 18px; font-weight: 800; min-width: 4ch">۱۰′</span>
+          <span style="font-size: 17px; line-height: 1.7">پیشنهاد شکل همکاری، اگر برای هر دو طرف منطقی بود</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid var(--color-divider); padding: 48px 0 34px">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 36px; align-items: start">
+      <div>
+        <div style="font-size: 18px; font-weight: 800; margin-bottom: 10px">مهدی تنه‌کار</div>
+        <div style="font-size: 15px; color: var(--dim); line-height: 1.8">مشاور کسب‌وکار، دیجیتال مارکتینگ و هوش مصنوعی</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+        <a class="a-link" href="https://wa.me/989126589474">واتساپ <span class="a-num">۰۹۱۲۶۵۸۹۴۷۴</span></a>
+        <a class="a-link" href="tel:+982126422742"><span class="a-num">۰۲۱ ۲۶۴۲۲۷۴۲</span></a>
+        <a class="a-link" href="mailto:mehditanekar@gmail.com"><span class="a-num">mehditanekar@gmail.com</span></a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+        <a class="a-link" href="#questions">سه سؤال</a>
+        <a class="a-link" href="#case">مطالعه موردی</a>
+        <a class="a-link" href="#method">روش کار</a>
+        <a class="a-link" href="#record">سابقه</a>
+      </div>
+      <div style="font-size: 14px; color: var(--dim)">© ۱۴۰۵ · <span class="a-num">mehditanekar.ir</span></div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
