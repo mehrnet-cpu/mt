@@ -297,15 +297,26 @@ textarea.input { min-height: 90px; resize: vertical; }
     .a-card { transition: transform .25s ease, border-color .25s ease; }
     .a-card:hover { transform: translateY(-4px); border-color: color-mix(in oklch, var(--a1) 50%, transparent); }
     ::selection { background: color-mix(in oklch, var(--a1) 40%, transparent); }
+    @media (max-width: 700px) {
+      .a-nav { display: none; }
+      .a-hero-top { padding-top: 120px !important; }
+      .a-pad-lg { padding-top: 64px !important; padding-bottom: 64px !important; }
+      .a-pad-lg-x { padding-left: 20px !important; padding-right: 20px !important; }
+      .a-stats-grid { grid-template-columns: 1fr !important; }
+      .a-stat { border-inline-end: none !important; border-bottom: 1px solid var(--color-divider); }
+      .a-stat:last-child { border-bottom: none; }
+      h1 { font-size: 34px !important; }
+      h2 { font-size: 28px !important; }
+    }
 </style>
 </head>
 <body>
-<div dir="rtl" style="background: #0A2735; color: #F9F9F9; min-height: 100vh; overflow-x: hidden; --a1: #FF6D41; --a2: #FF9271; --a3: #FFB79E; --a4: #B33D1B; --a5: #4F160A; --r-pill: 10px; --r-card: 6px; --r-img: 6px; --r-box: 10px; --card-border: var(--color-divider); --card-shadow: none; --card-bg: transparent">
+<div dir="rtl" style="background: #0A2735; color: #F9F9F9; min-height: 100vh; overflow-x: hidden; --a1: #FF6D41; --a2: #FF9271; --a3: #FFB79E; --a4: #B33D1B; --a5: #4F160A; --r-pill: 999px; --r-card: 24px; --r-img: 32px; --r-box: 36px; --card-border: var(--color-divider); --card-shadow: none; --card-bg: transparent">
 
   <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 20; backdrop-filter: blur(14px); background: rgba(10,39,53,0.85); border-bottom: 1px solid var(--color-divider)">
     <div style="max-width: 1280px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap">
       <a href="#top" class="a-link" style="font-size: 18px; font-weight: 800; margin-inline-end: auto">دکتر مهدی تنه‌کار</a>
-      <nav style="display: flex; align-items: center; gap: 26px; font-size: 14px; color: var(--dim); flex-wrap: wrap">
+      <nav class="a-nav" style="display: flex; align-items: center; gap: 26px; font-size: 14px; color: var(--dim); flex-wrap: wrap">
         <a href="#services" class="a-link">خدمات</a>
         <a href="#case" class="a-link">مطالعه موردی</a>
         <a href="#method" class="a-link">روش کار</a>
@@ -316,7 +327,7 @@ textarea.input { min-height: 90px; resize: vertical; }
     </div>
   </header>
 
-  <section id="top" style="max-width: 1280px; margin: 0 auto; padding: 168px 32px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 64px; align-items: center">
+  <section id="top" class="a-hero-top" style="max-width: 1280px; margin: 0 auto; padding: 168px 32px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 64px; align-items: center">
     <div>
       <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px">
         <span style="font-size: 13px; padding: 7px 16px; border-radius: var(--r-pill); border: 1px solid var(--color-divider); color: var(--dim)">دیجیتال مارکتینگ</span>
@@ -330,7 +341,7 @@ textarea.input { min-height: 90px; resize: vertical; }
         <a class="a-link" href="tel:+982126422742" style="font-size: 16px; font-weight: 600; padding: 17px 26px; border: 1px solid var(--color-divider); border-radius: var(--r-pill); text-decoration: none"><span class="a-num">۰۲۱ ۲۶۴۲۲۷۴۲</span></a>
       </div>
     </div>
-    <div style="position: relative">
+    <div style="position: relative; max-width: 380px; margin-inline-start: auto">
       <div style="position: absolute; inset-block-start: -26px; inset-inline-start: -26px; width: 148px; height: 148px; border-radius: 999px; border: 1px solid color-mix(in oklch, var(--a1) 50%, transparent)"></div>
       <div style="position: relative; border-radius: var(--r-img); overflow: hidden; aspect-ratio: 4/5; box-shadow: 0 20px 50px rgba(0,0,0,0.35)">
         <img src="assets/mehdi-portrait.jpg" alt="مهدی تنه‌کار" style="width: 100%; height: 100%; object-fit: cover">
@@ -340,23 +351,23 @@ textarea.input { min-height: 90px; resize: vertical; }
 
   <div style="max-width: 1280px; margin: 0 auto; padding: 56px 32px 0">
     
-    <svg viewBox="0 0 1200 24" preserveAspectRatio="none" style="width: 100%; height: 20px; display: block; margin-bottom: 30px"><path d="M0 6 Q 300 20, 600 12 T 1200 8" fill="none" stroke="var(--a1)" stroke-width="2.5" stroke-linecap="round"></path></svg><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))">
-      <div style="padding: 20px 28px; text-align: center; border-inline-end: 1px solid var(--color-divider)">
+    <svg viewBox="0 0 1200 24" preserveAspectRatio="none" style="width: 100%; height: 20px; display: block; margin-bottom: 30px"><path d="M0 6 Q 300 20, 600 12 T 1200 8" fill="none" stroke="var(--a1)" stroke-width="2.5" stroke-linecap="round"></path></svg><div class="a-stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))">
+      <div class="a-stat" style="padding: 20px 28px; text-align: center; border-inline-end: 1px solid var(--color-divider)">
         <div class="a-num" style="font-size: 48px; font-weight: 800; color: var(--a1); line-height: 1; text-shadow: 0 0 28px color-mix(in oklch, var(--a1) 55%, transparent)">۲۵</div>
         <div style="width: 56px; height: 2px; border-radius: 999px; background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--a1) 80%, transparent), transparent); box-shadow: 0 0 10px color-mix(in oklch, var(--a1) 60%, transparent); margin: 18px auto"></div>
         <div style="font-size: 13px; letter-spacing: 0.1em; color: var(--dim)">سال تجربه اجرایی</div>
       </div>
-      <div style="padding: 20px 28px; text-align: center; border-inline-end: 1px solid var(--color-divider)">
+      <div class="a-stat" style="padding: 20px 28px; text-align: center; border-inline-end: 1px solid var(--color-divider)">
         <div class="a-num" style="font-size: 48px; font-weight: 800; color: var(--a1); line-height: 1; text-shadow: 0 0 28px color-mix(in oklch, var(--a1) 55%, transparent)">۱۳۸۸</div>
         <div style="width: 56px; height: 2px; border-radius: 999px; background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--a1) 80%, transparent), transparent); box-shadow: 0 0 10px color-mix(in oklch, var(--a1) 60%, transparent); margin: 18px auto"></div>
         <div style="font-size: 13px; letter-spacing: 0.1em; color: var(--dim)">تأسیس ایران‌میز</div>
       </div>
-      <div style="padding: 20px 28px; text-align: center; border-inline-end: 1px solid var(--color-divider)">
+      <div class="a-stat" style="padding: 20px 28px; text-align: center; border-inline-end: 1px solid var(--color-divider)">
         <div style="font-size: 48px; font-weight: 800; color: var(--a1); line-height: 1; text-shadow: 0 0 28px color-mix(in oklch, var(--a1) 55%, transparent)">۲</div>
         <div style="width: 56px; height: 2px; border-radius: 999px; background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--a1) 80%, transparent), transparent); box-shadow: 0 0 10px color-mix(in oklch, var(--a1) 60%, transparent); margin: 18px auto"></div>
         <div style="font-size: 13px; letter-spacing: 0.1em; color: var(--dim)">سال،&nbsp; از صفر تا ۱۰۰ فروش اینترنتی JPA</div>
       </div>
-      <div style="padding: 20px 28px; text-align: center">
+      <div class="a-stat" style="padding: 20px 28px; text-align: center">
         <div class="a-num" style="font-size: 48px; font-weight: 800; color: var(--a1); line-height: 1; text-shadow: 0 0 28px color-mix(in oklch, var(--a1) 55%, transparent)">۳</div>
         <div style="width: 56px; height: 2px; border-radius: 999px; background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--a1) 80%, transparent), transparent); box-shadow: 0 0 10px color-mix(in oklch, var(--a1) 60%, transparent); margin: 18px auto"></div>
         <div style="font-size: 13px; letter-spacing: 0.1em; color: var(--dim)">دوره تدریس سازمانی</div>
@@ -367,25 +378,25 @@ textarea.input { min-height: 90px; resize: vertical; }
   <section style="max-width: 1280px; margin: 0 auto; padding: 68px 32px 0">
     <p style="font-size: 13px; letter-spacing: 0.14em; color: var(--dim); margin-bottom: 28px; text-align: center">برندهایی که با آن‌ها کار کرده‌ام</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px">
-      <div style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+      <div class="a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
         <img src="assets/logo-iranmiz.png" alt="ایران‌میز" style="height: 48px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
       </div>
-      <div style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+      <div class="a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
         <img src="assets/logo-jpa.png" alt="جامه‌پوش آرا" style="height: 60px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
       </div>
-      <div style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+      <div class="a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
         <img src="assets/logo-dehban.webp" alt="آکادمی دهبان" style="height: 52px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
       </div>
-      <div style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+      <div class="a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
         <img src="assets/logo-hamerz.webp" alt="هامرز" style="height: 40px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
       </div>
-      <div style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+      <div class="a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
         <img src="assets/logo-mehrnet.png" alt="مهرنت" style="height: 40px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
       </div>
     </div>
   </section>
 
-  <section id="services" style="max-width: 1280px; margin: 0 auto; padding: 100px 32px; position: relative">
+  <section id="services" class="a-pad-lg a-pad-lg-x" style="max-width: 1280px; margin: 0 auto; padding: 100px 32px; position: relative">
     <div style="position: absolute; inset-inline-start: 50%; inset-block-start: 0; width: 700px; height: 400px; transform: translateX(-50%); background: radial-gradient(ellipse at center, color-mix(in oklch, var(--a1) 12%, transparent), transparent 70%); pointer-events: none"></div>
     <div style="text-align: center; max-width: 640px; margin: 0 auto 52px; position: relative">
       <div style="font-size: 13px; letter-spacing: 0.14em; color: var(--a1); font-weight: 700; margin-bottom: 18px">خدمات</div>
@@ -445,7 +456,7 @@ textarea.input { min-height: 90px; resize: vertical; }
     </div>
   </section>
 
-  <section id="case" style="background: #F9F9F9; color: var(--ink); padding: 100px 0">
+  <section id="case" class="a-pad-lg" style="background: #F9F9F9; color: var(--ink); padding: 100px 0">
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px">
       <div style="font-size: 13px; letter-spacing: 0.14em; color: var(--a4); font-weight: 700; margin-bottom: 20px">مطالعه موردی</div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: start">
@@ -533,7 +544,7 @@ textarea.input { min-height: 90px; resize: vertical; }
     </div>
   </section>
 
-  <section id="method" style="max-width: 1280px; margin: 0 auto; padding: 100px 32px; position: relative">
+  <section id="method" class="a-pad-lg a-pad-lg-x" style="max-width: 1280px; margin: 0 auto; padding: 100px 32px; position: relative">
     <div style="position: absolute; inset-inline-start: 50%; inset-block-start: 0; width: 700px; height: 380px; transform: translateX(-50%); background: radial-gradient(ellipse at center, color-mix(in oklch, var(--a1) 12%, transparent), transparent 70%); pointer-events: none"></div>
     <div style="text-align: center; max-width: 640px; margin: 0 auto 56px; position: relative">
       <div style="font-size: 13px; letter-spacing: 0.14em; color: var(--a1); font-weight: 700; margin-bottom: 18px">روش کار</div>
@@ -541,7 +552,7 @@ textarea.input { min-height: 90px; resize: vertical; }
       <p style="font-size: 17px; line-height: 1.9; margin: 16px 0 0; color: var(--dim)">جای تیم شما کار نمی‌کنم؛ به تیم جهت می‌دهم و پاسخ‌گو نگهش می‌دارم.</p>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px">
-      <div style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
+      <div class="a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
         <div style="width: 52px; height: 52px; border-radius: 14px; border: 1px solid color-mix(in oklch, var(--a1) 40%, var(--color-divider)); display: flex; align-items: center; justify-content: center; margin-bottom: 20px">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.3-4.3"></path></svg>
         </div>
@@ -549,7 +560,7 @@ textarea.input { min-height: 90px; resize: vertical; }
         <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 10px">عارضه‌یابی</h3>
         <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">گلوگاه واقعی فروش، نه علائم آن.</p>
       </div>
-      <div style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
+      <div class="a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
         <div style="width: 52px; height: 52px; border-radius: 14px; border: 1px solid color-mix(in oklch, var(--a1) 40%, var(--color-divider)); display: flex; align-items: center; justify-content: center; margin-bottom: 20px">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20l-5.5 1.5L5 16 15.5 5.5a2.1 2.1 0 0 1 3 3L8 19l1-1z"></path><path d="M13 6l4 4"></path></svg>
         </div>
@@ -557,7 +568,7 @@ textarea.input { min-height: 90px; resize: vertical; }
         <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 10px">نقشه راه</h3>
         <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">اقدام‌ها به‌ترتیب اثر روی فروش.</p>
       </div>
-      <div style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
+      <div class="a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
         <div style="width: 52px; height: 52px; border-radius: 14px; border: 1px solid color-mix(in oklch, var(--a1) 40%, var(--color-divider)); display: flex; align-items: center; justify-content: center; margin-bottom: 20px">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0A1.65 1.65 0 0 0 10 3.09V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
         </div>
@@ -565,7 +576,7 @@ textarea.input { min-height: 90px; resize: vertical; }
         <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 10px">اجرا و نظارت</h3>
         <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">هدایت تیم و اصلاح مسیر پیش از هدررفت بودجه.</p>
       </div>
-      <div style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
+      <div class="a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
         <div style="width: 52px; height: 52px; border-radius: 14px; border: 1px solid color-mix(in oklch, var(--a1) 40%, var(--color-divider)); display: flex; align-items: center; justify-content: center; margin-bottom: 20px">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"></rect><path d="M9 9h.01M15 9h.01M9 15h6"></path></svg>
         </div>
@@ -576,7 +587,7 @@ textarea.input { min-height: 90px; resize: vertical; }
     </div>
   </section>
 
-  <section id="record" style="background: #0E3243; padding: 100px 0">
+  <section id="record" class="a-pad-lg" style="background: #0E3243; padding: 100px 0">
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 56px; align-items: start">
       <div>
         <div style="font-size: 13px; letter-spacing: 0.14em; color: var(--a1); font-weight: 700; margin-bottom: 20px">سابقه</div>
@@ -632,7 +643,7 @@ textarea.input { min-height: 90px; resize: vertical; }
     </div>
   </section>
 
-  <section id="articles" style="max-width: 1280px; margin: 0 auto; padding: 100px 32px; position: relative">
+  <section id="articles" class="a-pad-lg a-pad-lg-x" style="max-width: 1280px; margin: 0 auto; padding: 100px 32px; position: relative">
     <div style="position: absolute; inset-inline-start: 50%; inset-block-start: 0; width: 700px; height: 380px; transform: translateX(-50%); background: radial-gradient(ellipse at center, color-mix(in oklch, var(--a1) 12%, transparent), transparent 70%); pointer-events: none"></div>
     <div style="text-align: center; max-width: 640px; margin: 0 auto 44px; position: relative">
       <div style="font-size: 13px; letter-spacing: 0.14em; color: var(--a1); font-weight: 700; margin-bottom: 18px">بلاگ</div>
