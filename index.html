@@ -280,122 +280,174 @@ textarea.input { min-height: 90px; resize: vertical; }
       --font-heading: "Vazirmatn", system-ui, sans-serif;
       --font-body: "Vazirmatn", system-ui, sans-serif;
       --font-heading-weight: 800;
-      --color-bg: #0A2735;
-      --color-surface: #0E3243;
-      --color-text: #F9F9F9;
-      --color-accent: #FF6D41;
-      --color-accent-2: #004E72;
-      --color-divider: rgba(249, 249, 249, 0.16);
+      --color-divider: rgba(249, 249, 249, 0.14);
       --ink: #0A2735;
       --dim: #A9BCC6;
     }
     html { direction: rtl; }
     body { margin: 0; direction: rtl; text-align: right; background: #0A2735; color: #F9F9F9; font-size: 16px; }
-    h1, h2, h3, h4 { letter-spacing: -0.01em; line-height: 1.24; margin: 0; }
+    h1, h2, h3, h4 { letter-spacing: -0.01em; line-height: 1.22; margin: 0; }
     a { color: #FF9271; }
     a:hover { color: #FFB79E; }
     .a-link { color: inherit; text-decoration: none; transition: color .2s ease; }
-    .a-link:hover { color: #FF9271; }
-    .a-row { transition: background .25s ease; }
-    .a-row:hover { background: rgba(249,249,249,0.04); }
+    .a-link:hover { color: var(--a2); }
     .a-cta { transition: transform .2s ease, background .2s ease; }
-    .a-cta:hover { background: #FF9271; transform: translateY(-2px); }
+    .a-cta:hover { background: var(--a2); transform: translateY(-2px); }
     .a-num { direction: ltr; unicode-bidi: isolate; }
-    ::selection { background: rgba(255,109,65,0.4); }
+    .a-card { transition: transform .25s ease, border-color .25s ease; }
+    .a-card:hover { transform: translateY(-4px); border-color: color-mix(in oklch, var(--a1) 50%, transparent); }
+    ::selection { background: color-mix(in oklch, var(--a1) 40%, transparent); }
 </style>
 </head>
 <body>
-<div dir="rtl" style="background: #0A2735; color: #F9F9F9; min-height: 100vh; overflow-x: hidden">
+<div dir="rtl" style="background: #0A2735; color: #F9F9F9; min-height: 100vh; overflow-x: hidden; --a1: #FF6D41; --a2: #FF9271; --a3: #FFB79E; --a4: #B33D1B; --a5: #4F160A; --r-pill: 10px; --r-card: 6px; --r-img: 6px; --r-box: 10px; --card-border: var(--color-divider); --card-shadow: none; --card-bg: transparent">
 
-  <header style="position: sticky; top: 0; z-index: 20; backdrop-filter: blur(14px); background: rgba(10,39,53,0.85); border-bottom: 1px solid var(--color-divider)">
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 20; backdrop-filter: blur(14px); background: rgba(10,39,53,0.85); border-bottom: 1px solid var(--color-divider)">
     <div style="max-width: 1280px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap">
-      <a href="#top" class="a-link" style="display: flex; align-items: baseline; gap: 10px; margin-inline-end: auto">
-        <span style="font-size: 18px; font-weight: 800">مهدی تنه‌کار</span>
-        <span style="font-size: 13px; color: var(--dim)">مشاور رشد فروش آنلاین</span>
-      </a>
+      <a href="#top" class="a-link" style="font-size: 18px; font-weight: 800; margin-inline-end: auto">دکتر مهدی تنه‌کار</a>
       <nav style="display: flex; align-items: center; gap: 26px; font-size: 14px; color: var(--dim); flex-wrap: wrap">
-        <a href="#questions" class="a-link">سه سؤال</a>
+        <a href="#services" class="a-link">خدمات</a>
         <a href="#case" class="a-link">مطالعه موردی</a>
         <a href="#method" class="a-link">روش کار</a>
         <a href="#record" class="a-link">سابقه</a>
+        <a href="#articles" class="a-link">مقالات</a>
       </nav>
-      <a class="a-cta" href="https://wa.me/989126589474" style="background: #FF6D41; color: var(--ink); font-size: 14px; font-weight: 700; padding: 12px 22px; border-radius: 999px; text-decoration: none; white-space: nowrap">جلسه ۴۵ دقیقه‌ای</a>
+      <a class="a-cta" href="https://wa.me/989126589474" style="background: var(--a1); color: var(--ink); font-size: 14px; font-weight: 700; padding: 12px 22px; border-radius: var(--r-pill); text-decoration: none; white-space: nowrap">رزرو مشاوره</a>
     </div>
   </header>
 
-  <section id="top" style="max-width: 1280px; margin: 0 auto; padding: 92px 32px 88px; display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 64px; align-items: center">
+  <section id="top" style="max-width: 1280px; margin: 0 auto; padding: 168px 32px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 64px; align-items: center">
     <div>
-      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 30px">
-        <span style="width: 46px; height: 1px; background: #FF6D41"></span>
-        <span style="font-size: 13px; letter-spacing: 0.12em; color: #FF9271; font-weight: 600">مشاور کسب‌وکار · دیجیتال مارکتینگ · هوش مصنوعی</span>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px">
+        <span style="font-size: 13px; padding: 7px 16px; border-radius: var(--r-pill); border: 1px solid var(--color-divider); color: var(--dim)">دیجیتال مارکتینگ</span>
+        <span style="font-size: 13px; padding: 7px 16px; border-radius: var(--r-pill); border: 1px solid var(--color-divider); color: var(--dim)">تیم‌سازی</span>
+        <span style="font-size: 13px; padding: 7px 16px; border-radius: var(--r-pill); border: 1px solid var(--color-divider); color: var(--dim)">هوش مصنوعی سازمانی</span>
       </div>
-      <h1 style="font-size: clamp(38px, 5.6vw, 66px); font-weight: 800; line-height: 1.2; margin: 0 0 28px">فروش آنلاین برندتان<br><span style="color: #FF6D41">دارایی</span> است</h1>
+      <h1 style="font-size: clamp(36px, 5.4vw, 64px); font-weight: 800; line-height: 1.2; margin: 0 0 26px">فروش آنلاین برندتان<br><span style="color: var(--a1)">دارایی</span> است</h1>
       <p style="font-size: 19px; line-height: 1.95; color: var(--dim); max-width: 46ch; margin: 0 0 38px; text-wrap: pretty">کانال فروش مستقل می‌سازیم: استراتژی، رهبری تیم دیجیتال و هوش مصنوعی در فرایندهای واقعی سازمان — با سنجش اثر روی عدد فروش.</p>
       <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center">
-        <a class="a-cta" href="https://wa.me/989126589474" style="background: #FF6D41; color: var(--ink); font-size: 16px; font-weight: 700; padding: 17px 34px; border-radius: 999px; text-decoration: none">درخواست جلسه بدون هزینه</a>
-        <a class="a-link" href="tel:+982126422742" style="font-size: 16px; font-weight: 600; padding: 17px 26px; border: 1px solid var(--color-divider); border-radius: 999px; text-decoration: none"><span class="a-num">۰۲۱ ۲۶۴۲۲۷۴۲</span></a>
+        <a class="a-cta" href="https://wa.me/989126589474" style="background: var(--a1); color: var(--ink); font-size: 16px; font-weight: 700; padding: 17px 34px; border-radius: var(--r-pill); text-decoration: none">درخواست جلسه بدون هزینه</a>
+        <a class="a-link" href="tel:+982126422742" style="font-size: 16px; font-weight: 600; padding: 17px 26px; border: 1px solid var(--color-divider); border-radius: var(--r-pill); text-decoration: none"><span class="a-num">۰۲۱ ۲۶۴۲۲۷۴۲</span></a>
       </div>
     </div>
     <div style="position: relative">
-      <div style="position: absolute; inset-block-start: -26px; inset-inline-start: -26px; width: 148px; height: 148px; border-radius: 999px; border: 1px solid rgba(255,109,65,0.5)"></div>
-      <div style="position: relative; border-radius: 32px; overflow: hidden; aspect-ratio: 4/5; box-shadow: 0 20px 50px rgba(0,0,0,0.35)">
+      <div style="position: absolute; inset-block-start: -26px; inset-inline-start: -26px; width: 148px; height: 148px; border-radius: 999px; border: 1px solid color-mix(in oklch, var(--a1) 50%, transparent)"></div>
+      <div style="position: relative; border-radius: var(--r-img); overflow: hidden; aspect-ratio: 4/5; box-shadow: 0 20px 50px rgba(0,0,0,0.35)">
         <img src="assets/mehdi-portrait.jpg" alt="مهدی تنه‌کار" style="width: 100%; height: 100%; object-fit: cover">
-      </div>
-      <div style="position: absolute; inset-block-end: 26px; inset-inline-start: -22px; background: #F9F9F9; color: var(--ink); border-radius: 20px; padding: 18px 22px; box-shadow: 0 18px 40px rgba(0,0,0,0.35)">
-        <div style="font-size: 13px; color: #4E5964; margin-bottom: 4px">تجربه اجرایی</div>
-        <div style="font-size: 26px; font-weight: 800; line-height: 1.1">۲۵ سال</div>
       </div>
     </div>
   </section>
 
-  <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px 92px">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 32px; border-top: 1px solid var(--color-divider)">
-      <div style="padding-top: 30px">
-        <div style="font-size: 34px; font-weight: 800; color: #FF9271; line-height: 1">۱۳۸۸</div>
-        <div style="font-size: 14px; color: var(--dim); margin-top: 10px; line-height: 1.7">تأسیس ایران‌میز — اولین فروشگاه اینترنتی مبلمان ایران</div>
+  <div style="max-width: 1280px; margin: 0 auto; padding: 56px 32px 0">
+    
+    <svg viewBox="0 0 1200 24" preserveAspectRatio="none" style="width: 100%; height: 20px; display: block; margin-bottom: 30px"><path d="M0 6 Q 300 20, 600 12 T 1200 8" fill="none" stroke="var(--a1)" stroke-width="2.5" stroke-linecap="round"></path></svg><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))">
+      <div style="padding: 20px 28px; text-align: center; border-inline-end: 1px solid var(--color-divider)">
+        <div class="a-num" style="font-size: 48px; font-weight: 800; color: var(--a1); line-height: 1; text-shadow: 0 0 28px color-mix(in oklch, var(--a1) 55%, transparent)">۲۵</div>
+        <div style="width: 56px; height: 2px; border-radius: 999px; background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--a1) 80%, transparent), transparent); box-shadow: 0 0 10px color-mix(in oklch, var(--a1) 60%, transparent); margin: 18px auto"></div>
+        <div style="font-size: 13px; letter-spacing: 0.1em; color: var(--dim)">سال تجربه اجرایی</div>
       </div>
-      <div style="padding-top: 30px">
-        <div style="font-size: 34px; font-weight: 800; color: #FF9271; line-height: 1">دو سال</div>
-        <div style="font-size: 14px; color: var(--dim); margin-top: 10px; line-height: 1.7">از صفر ترافیک تا کانال اصلی فروش جامه‌پوش آرا</div>
+      <div style="padding: 20px 28px; text-align: center; border-inline-end: 1px solid var(--color-divider)">
+        <div class="a-num" style="font-size: 48px; font-weight: 800; color: var(--a1); line-height: 1; text-shadow: 0 0 28px color-mix(in oklch, var(--a1) 55%, transparent)">۱۳۸۸</div>
+        <div style="width: 56px; height: 2px; border-radius: 999px; background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--a1) 80%, transparent), transparent); box-shadow: 0 0 10px color-mix(in oklch, var(--a1) 60%, transparent); margin: 18px auto"></div>
+        <div style="font-size: 13px; letter-spacing: 0.1em; color: var(--dim)">تأسیس ایران‌میز</div>
       </div>
-      <div style="padding-top: 30px">
-        <div style="font-size: 34px; font-weight: 800; color: #FF9271; line-height: 1">دکترا</div>
-        <div style="font-size: 14px; color: var(--dim); margin-top: 10px; line-height: 1.7">مشاوره مدیریت · مهندس نساجی</div>
+      <div style="padding: 20px 28px; text-align: center; border-inline-end: 1px solid var(--color-divider)">
+        <div style="font-size: 48px; font-weight: 800; color: var(--a1); line-height: 1; text-shadow: 0 0 28px color-mix(in oklch, var(--a1) 55%, transparent)">۲</div>
+        <div style="width: 56px; height: 2px; border-radius: 999px; background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--a1) 80%, transparent), transparent); box-shadow: 0 0 10px color-mix(in oklch, var(--a1) 60%, transparent); margin: 18px auto"></div>
+        <div style="font-size: 13px; letter-spacing: 0.1em; color: var(--dim)">سال،&nbsp; از صفر تا ۱۰۰ فروش اینترنتی JPA</div>
       </div>
-      <div style="padding-top: 30px">
-        <div style="font-size: 34px; font-weight: 800; color: #FF9271; line-height: 1">۳</div>
-        <div style="font-size: 14px; color: var(--dim); margin-top: 10px; line-height: 1.7">دوره تدریس سازمانی هوش مصنوعی و دیجیتال مارکتینگ</div>
+      <div style="padding: 20px 28px; text-align: center">
+        <div class="a-num" style="font-size: 48px; font-weight: 800; color: var(--a1); line-height: 1; text-shadow: 0 0 28px color-mix(in oklch, var(--a1) 55%, transparent)">۳</div>
+        <div style="width: 56px; height: 2px; border-radius: 999px; background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--a1) 80%, transparent), transparent); box-shadow: 0 0 10px color-mix(in oklch, var(--a1) 60%, transparent); margin: 18px auto"></div>
+        <div style="font-size: 13px; letter-spacing: 0.1em; color: var(--dim)">دوره تدریس سازمانی</div>
       </div>
     </div>
   </div>
 
-  <section id="questions" style="max-width: 1280px; margin: 0 auto; padding: 0 32px 100px">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; align-items: end; margin-bottom: 18px">
-      <div>
-        <div style="font-size: 13px; letter-spacing: 0.12em; color: #FF9271; margin-bottom: 18px">۰۱ — سه سؤال</div>
-        <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800">اگر پاسخ هر سه را می‌دانید، به من نیازی ندارید.</h2>
+  <section style="max-width: 1280px; margin: 0 auto; padding: 68px 32px 0">
+    <p style="font-size: 13px; letter-spacing: 0.14em; color: var(--dim); margin-bottom: 28px; text-align: center">برندهایی که با آن‌ها کار کرده‌ام</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px">
+      <div style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+        <img src="assets/logo-iranmiz.png" alt="ایران‌میز" style="height: 48px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
       </div>
-      <p style="font-size: 17px; line-height: 1.95; color: var(--dim); margin: 0">جواب این سه سؤال معلوم می‌کند فروش آنلاین شما یک دارایی است یا یک هزینه ماهانه.</p>
+      <div style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+        <img src="assets/logo-jpa.png" alt="جامه‌پوش آرا" style="height: 60px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
+      </div>
+      <div style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+        <img src="assets/logo-dehban.webp" alt="آکادمی دهبان" style="height: 52px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
+      </div>
+      <div style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+        <img src="assets/logo-hamerz.webp" alt="هامرز" style="height: 40px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
+      </div>
+      <div style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+        <img src="assets/logo-mehrnet.png" alt="مهرنت" style="height: 40px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
+      </div>
     </div>
-    <div>
-      <div class="a-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: start; padding: 32px 0; border-top: 1px solid var(--color-divider)">
-        <h3 style="font-size: clamp(20px, 2.2vw, 26px); font-weight: 700; line-height: 1.5"><span style="color: #FF6D41; font-size: 15px; margin-inline-end: 14px">۰۱</span>اگر فردا بودجه تبلیغات را صفر کنید، چند درصد فروش‌تان می‌ماند؟</h3>
-        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">اگر پاسخ «تقریباً هیچ» است، شما ترافیک اجاره می‌کنید، نه اینکه دارایی بسازید.</p>
-      </div>
-      <div class="a-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: start; padding: 32px 0; border-top: 1px solid var(--color-divider)">
-        <h3 style="font-size: clamp(20px, 2.2vw, 26px); font-weight: 700; line-height: 1.5"><span style="color: #FF6D41; font-size: 15px; margin-inline-end: 14px">۰۲</span>چند درصد فروش شما از مارکت‌پلیس‌ها می‌آید؟</h3>
-        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">هر درصد، بخشی از حاشیه سود و کل داده مشتری است که در اختیار شما نیست.</p>
-      </div>
-      <div class="a-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: start; padding: 32px 0; border-block: 1px solid var(--color-divider)">
-        <h3 style="font-size: clamp(20px, 2.2vw, 26px); font-weight: 700; line-height: 1.5"><span style="color: #FF6D41; font-size: 15px; margin-inline-end: 14px">۰۳</span>در تیم شما کسی پاسخ‌گوی عدد فروش آنلاین است؟</h3>
-        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">مشغول کار بودن تیم، با پاسخ‌گو بودن نسبت به فروش دو چیز متفاوت است.</p>
-      </div>
+  </section>
+
+  <section id="services" style="max-width: 1280px; margin: 0 auto; padding: 100px 32px; position: relative">
+    <div style="position: absolute; inset-inline-start: 50%; inset-block-start: 0; width: 700px; height: 400px; transform: translateX(-50%); background: radial-gradient(ellipse at center, color-mix(in oklch, var(--a1) 12%, transparent), transparent 70%); pointer-events: none"></div>
+    <div style="text-align: center; max-width: 640px; margin: 0 auto 52px; position: relative">
+      <div style="font-size: 13px; letter-spacing: 0.14em; color: var(--a1); font-weight: 700; margin-bottom: 18px">خدمات</div>
+      <h2 style="font-size: clamp(28px, 4vw, 44px); font-weight: 800">چطور <span style="color: var(--a1)">کمک می‌کنم</span></h2>
+      <p style="font-size: 17px; line-height: 1.9; color: var(--dim); margin: 16px 0 0">پیدا و رفع‌کردن گلوگاه رشد، بر اساس عارضه‌یابی — نه یک بسته خدماتی ثابت.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px">
+      <article class="a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 30%, var(--color-divider)); border-radius: var(--r-card); padding: 40px 32px; display: flex; flex-direction: column; gap: 22px; background: radial-gradient(120px 90px at 70px 60px, color-mix(in oklch, var(--a1) 16%, transparent), transparent)">
+        <div style="width: 64px; height: 64px; border-radius: 16px; border: 1px solid color-mix(in oklch, var(--a1) 40%, var(--color-divider)); display: flex; align-items: center; justify-content: center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"></path><path d="M17 6h6v6"></path></svg>
+        </div>
+        <div>
+          <div style="font-size: 30px; font-weight: 800; color: var(--a1); line-height: 1.2">عارضه‌یابی</div>
+          <div style="font-size: 18px; font-weight: 700; margin-top: 4px">مشاوره دیجیتال مارکتینگ</div>
+        </div>
+        <p style="font-size: 15px; line-height: 1.85; color: var(--dim); margin: 0">ممیزی وضعیت فعلی، انتخاب کانال‌ها بر اساس سهم واقعی‌شان از فروش، و معماری سئو و محتوا.</p>
+        <div style="display: flex; flex-direction: column; gap: 14px; font-size: 15px; margin-top: 6px">
+          <div style="display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>ممیزی کانال‌های فروش</span></div>
+          <div style="display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>معماری سئو و محتوا</span></div>
+        </div>
+      </article>
+      <article class="a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 30%, var(--color-divider)); border-radius: var(--r-card); padding: 40px 32px; display: flex; flex-direction: column; gap: 22px; background: radial-gradient(120px 90px at 70px 60px, color-mix(in oklch, var(--a1) 16%, transparent), transparent)">
+        <div style="width: 64px; height: 64px; border-radius: 16px; border: 1px solid color-mix(in oklch, var(--a1) 40%, var(--color-divider)); display: flex; align-items: center; justify-content: center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+        </div>
+        <div>
+          <div style="font-size: 30px; font-weight: 800; color: var(--a1); line-height: 1.2">اجرا</div>
+          <div style="font-size: 18px; font-weight: 700; margin-top: 4px">تیم‌سازی و نظارت بر تیم فنی</div>
+        </div>
+        <p style="font-size: 15px; line-height: 1.85; color: var(--dim); margin: 0">هدف‌گذاری، تقسیم کار و بازبینی هفتگی تیم محتوا، سئو و تبلیغات — یا ساختن تیم از صفر.</p>
+        <div style="display: flex; flex-direction: column; gap: 14px; font-size: 15px; margin-top: 6px">
+          <div style="display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>ساختار و استخدام تیم</span></div>
+          <div style="display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>بازبینی دوره‌ای عملکرد</span></div>
+        </div>
+      </article>
+      <article class="a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 30%, var(--color-divider)); border-radius: var(--r-card); padding: 40px 32px; display: flex; flex-direction: column; gap: 22px; background: radial-gradient(120px 90px at 70px 60px, color-mix(in oklch, var(--a1) 16%, transparent), transparent)">
+        <div style="width: 64px; height: 64px; border-radius: 16px; border: 1px solid color-mix(in oklch, var(--a1) 40%, var(--color-divider)); display: flex; align-items: center; justify-content: center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7-7 18-3-8-8-3z"></path></svg>
+        </div>
+        <div>
+          <div style="font-size: 30px; font-weight: 800; color: var(--a1); line-height: 1.2">مقیاس</div>
+          <div style="font-size: 18px; font-weight: 700; margin-top: 4px">پیاده‌سازی هوش مصنوعی در سازمان</div>
+        </div>
+        <p style="font-size: 15px; line-height: 1.85; color: var(--dim); margin: 0">تحلیل داده، اتوماسیون محتوا و انتخاب ابزار — با فرایند تکرارشدنی و آموزش تیم.</p>
+        <div style="display: flex; flex-direction: column; gap: 14px; font-size: 15px; margin-top: 6px">
+          <div style="display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>اتوماسیون فرایند با AI</span></div>
+          <div style="display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>آموزش تیم برای استفاده روزمره</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section style="max-width: 1280px; margin: 0 auto; padding: 0 32px 100px">
+    <div style="border-inline-start: 3px solid var(--a1); padding-inline-start: 32px">
+      <p style="font-size: clamp(22px, 3vw, 32px); line-height: 1.7; font-weight: 600; margin: 0 0 18px; max-width: 52ch">اگر فردا بودجه تبلیغات‌تان صفر شود و فروش هم صفر شود، شما ترافیک اجاره می‌کنید — نه اینکه دارایی بسازید.</p>
+      <span style="font-size: 15px; color: var(--dim)">— مهدی تنه‌کار</span>
     </div>
   </section>
 
   <section id="case" style="background: #F9F9F9; color: var(--ink); padding: 100px 0">
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px">
-      <div style="font-size: 13px; letter-spacing: 0.12em; color: #B33D1B; margin-bottom: 20px">۰۲ — مطالعه موردی</div>
+      <div style="font-size: 13px; letter-spacing: 0.14em; color: var(--a4); font-weight: 700; margin-bottom: 20px">مطالعه موردی</div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: start">
         <div>
           <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 14px">
@@ -415,11 +467,11 @@ textarea.input { min-height: 90px; resize: vertical; }
             </div>
             <div style="padding: 20px 0">
               <div style="font-size: 13px; color: #4E5964">امروز</div>
-              <div style="font-size: 21px; font-weight: 800; margin-top: 6px; color: #B33D1B">کانال اصلی فروش</div>
+              <div style="font-size: 21px; font-weight: 800; margin-top: 6px; color: var(--a4)">کانال اصلی فروش</div>
             </div>
           </div>
         </div>
-        <div style="background: #ffffff; border-radius: 28px; padding: 32px; box-shadow: 0 14px 40px rgba(10,39,53,0.1)">
+        <div style="background: #ffffff; border-radius: var(--r-card); padding: 32px; box-shadow: 0 14px 40px rgba(10,39,53,0.1)">
           <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 10px">
             <div style="font-size: 15px; font-weight: 700">کلیک ارگانیک — بازه ۲۴ ماهه</div>
             <div style="font-size: 12px; color: #6E7883">نمودار شِمایی</div>
@@ -427,25 +479,25 @@ textarea.input { min-height: 90px; resize: vertical; }
           <svg viewBox="0 0 420 220" style="width: 100%; height: auto; direction: ltr" role="img" aria-label="رشد پله‌ای کلیک ارگانیک در بازه بیست‌وچهار ماهه">
             <line x1="30" y1="185" x2="405" y2="185" stroke="rgba(10,39,53,0.16)" stroke-width="1"></line>
             <line x1="30" y1="20" x2="30" y2="185" stroke="rgba(10,39,53,0.16)" stroke-width="1"></line>
-            <line x1="215" y1="20" x2="215" y2="185" stroke="rgba(255,109,65,0.45)" stroke-width="1" stroke-dasharray="4 5"></line>
-            <path d="M30 176 C 90 174, 140 168, 175 156 C 215 142, 250 112, 290 84 C 330 56, 370 38, 405 30 L 405 185 L 30 185 Z" fill="rgba(255,109,65,0.1)"></path>
-            <path d="M30 176 C 90 174, 140 168, 175 156 C 215 142, 250 112, 290 84 C 330 56, 370 38, 405 30" fill="none" stroke="#FF6D41" stroke-width="3.2" stroke-linecap="round"></path>
+            <line x1="215" y1="20" x2="215" y2="185" stroke="var(--a1)" stroke-opacity="0.45" stroke-width="1" stroke-dasharray="4 5"></line>
+            <path d="M30 176 C 90 174, 140 168, 175 156 C 215 142, 250 112, 290 84 C 330 56, 370 38, 405 30 L 405 185 L 30 185 Z" fill="var(--a1)" fill-opacity="0.1"></path>
+            <path d="M30 176 C 90 174, 140 168, 175 156 C 215 142, 250 112, 290 84 C 330 56, 370 38, 405 30" fill="none" stroke="var(--a1)" stroke-width="3.2" stroke-linecap="round"></path>
             <circle cx="30" cy="176" r="4.5" fill="#0A2735"></circle>
-            <circle cx="215" cy="139" r="4.5" fill="#FF6D41"></circle>
+            <circle cx="215" cy="139" r="4.5" fill="var(--a1)"></circle>
             <circle cx="405" cy="30" r="5.5" fill="#0A2735"></circle>
           </svg>
           <div style="display: flex; justify-content: space-between; font-size: 12px; color: #4E5964; margin-top: 6px"><span>ماه ۱</span><span>شتاب‌گیری سئو — ماه ۱۲</span><span>ماه ۲۴</span></div>
           <div style="margin-top: 26px; display: flex; flex-direction: column; gap: 14px">
             <div style="display: flex; gap: 12px; align-items: flex-start">
-              <span style="width: 9px; height: 9px; border-radius: 999px; background: #FF6D41; margin-top: 8px; flex: none"></span>
+              <span style="width: 9px; height: 9px; border-radius: 999px; background: var(--a1); margin-top: 8px; flex: none"></span>
               <div style="font-size: 16px; line-height: 1.7"><span style="font-weight: 700">رشد پیوسته فروش</span> <span style="color: #4E5964">— از صفر به یکی از کانال‌های اصلی درآمد برند.</span></div>
             </div>
             <div style="display: flex; gap: 12px; align-items: flex-start">
-              <span style="width: 9px; height: 9px; border-radius: 999px; background: #FF6D41; margin-top: 8px; flex: none"></span>
+              <span style="width: 9px; height: 9px; border-radius: 999px; background: var(--a1); margin-top: 8px; flex: none"></span>
               <div style="font-size: 16px; line-height: 1.7"><span style="font-weight: 700">صفحه اول گوگل</span> <span style="color: #4E5964">— روی کلمات کلیدی پرفروش دسته‌های پوشاک.</span></div>
             </div>
             <div style="display: flex; gap: 12px; align-items: flex-start">
-              <span style="width: 9px; height: 9px; border-radius: 999px; background: #FF6D41; margin-top: 8px; flex: none"></span>
+              <span style="width: 9px; height: 9px; border-radius: 999px; background: var(--a1); margin-top: 8px; flex: none"></span>
               <div style="font-size: 16px; line-height: 1.7"><span style="font-weight: 700">ترافیک پایدار</span> <span style="color: #4E5964">— فروشی که وابسته به بودجه روزانه نیست.</span></div>
             </div>
           </div>
@@ -453,25 +505,26 @@ textarea.input { min-height: 90px; resize: vertical; }
       </div>
 
       <div style="margin-top: 64px">
+        <div style="font-size: 13px; letter-spacing: 0.14em; color: var(--a4); font-weight: 700; margin-bottom: 14px">جزئیات</div>
         <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 22px">آنچه انجام دادیم</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px">
           <div style="border-top: 1px solid rgba(10,39,53,0.16); padding: 24px 0 0">
-            <div style="font-size: 13px; color: #B33D1B; font-weight: 700; margin-bottom: 10px">۰۱</div>
+            <div style="font-size: 13px; color: var(--a4); font-weight: 700; margin-bottom: 10px">۰۱</div>
             <div style="font-size: 17px; font-weight: 700; margin-bottom: 8px">استراتژی بازاریابی و دیجیتال</div>
             <div style="font-size: 15px; line-height: 1.85; color: #4E5964">جایگاه برند، مخاطب و انتخاب کانال‌ها بر اساس سهم واقعی‌شان از فروش.</div>
           </div>
           <div style="border-top: 1px solid rgba(10,39,53,0.16); padding: 24px 0 0">
-            <div style="font-size: 13px; color: #B33D1B; font-weight: 700; margin-bottom: 10px">۰۲</div>
+            <div style="font-size: 13px; color: var(--a4); font-weight: 700; margin-bottom: 10px">۰۲</div>
             <div style="font-size: 17px; font-weight: 700; margin-bottom: 8px">رهبری و نظارت بر تیم دیجیتال</div>
             <div style="font-size: 15px; line-height: 1.85; color: #4E5964">هدف‌گذاری، تقسیم کار و بازبینی هفتگی تیم محتوا، سئو و تبلیغات.</div>
           </div>
           <div style="border-top: 1px solid rgba(10,39,53,0.16); padding: 24px 0 0">
-            <div style="font-size: 13px; color: #B33D1B; font-weight: 700; margin-bottom: 10px">۰۳</div>
+            <div style="font-size: 13px; color: var(--a4); font-weight: 700; margin-bottom: 10px">۰۳</div>
             <div style="font-size: 17px; font-weight: 700; margin-bottom: 8px">معماری سئو و محتوا</div>
             <div style="font-size: 15px; line-height: 1.85; color: #4E5964">ساختار Hub &amp; Spoke تا هر صفحه‌دسته برای کلمات پرفروش بالا بیاید.</div>
           </div>
           <div style="border-top: 1px solid rgba(10,39,53,0.16); padding: 24px 0 0">
-            <div style="font-size: 13px; color: #B33D1B; font-weight: 700; margin-bottom: 10px">۰۴</div>
+            <div style="font-size: 13px; color: var(--a4); font-weight: 700; margin-bottom: 10px">۰۴</div>
             <div style="font-size: 17px; font-weight: 700; margin-bottom: 8px">رهبری کمپین‌های تبلیغاتی</div>
             <div style="font-size: 15px; line-height: 1.85; color: #4E5964">کمپین داده‌محور با سنجش بازگشت هزینه، نه خرج پراکنده در چند پلتفرم.</div>
           </div>
@@ -480,149 +533,199 @@ textarea.input { min-height: 90px; resize: vertical; }
     </div>
   </section>
 
-  <section id="diagnosis" style="max-width: 1280px; margin: 0 auto; padding: 100px 32px">
-    <div style="font-size: 13px; letter-spacing: 0.12em; color: #FF9271; margin-bottom: 20px">۰۳ — تشخیص</div>
-    <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800; max-width: 30ch; margin-bottom: 18px">چهار چیزی که رشد فروش آنلاین را متوقف می‌کند</h2>
-    <p style="font-size: 17px; line-height: 1.95; color: var(--dim); max-width: 56ch; margin: 0 0 52px">اگر دو مورد برای شما آشناست، فروش آنلاین‌تان زیر ظرفیت واقعی برند کار می‌کند. کدام‌یک گلوگاه شماست؟ در جلسه اول مشخص می‌کنیم.</p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px">
-      <article style="position: relative; padding: 34px 30px; border-radius: 26px; background: #0E3243; overflow: hidden">
-        <span style="display: block; font-size: 13px; font-weight: 700; color: #FF9271; margin-bottom: 14px">۰۱</span>
-        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 12px; position: relative">فروش گروگان مارکت‌پلیس‌هاست</h3>
-        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0; position: relative">حاشیه سود فشرده می‌شود، داده مشتری در اختیار شما نیست و برند دیده نمی‌شود.</p>
-      </article>
-      <article style="position: relative; padding: 34px 30px; border-radius: 26px; background: #0E3243; overflow: hidden">
-        <span style="display: block; font-size: 13px; font-weight: 700; color: #FF9271; margin-bottom: 14px">۰۲</span>
-        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 12px; position: relative">ترافیک ارگانیک نزدیک صفر</h3>
-        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0; position: relative">هر فروش با پول تبلیغات خریده می‌شود؛ بودجه قطع شود، فروش هم قطع می‌شود.</p>
-      </article>
-      <article style="position: relative; padding: 34px 30px; border-radius: 26px; background: #0E3243; overflow: hidden">
-        <span style="display: block; font-size: 13px; font-weight: 700; color: #FF9271; margin-bottom: 14px">۰۳</span>
-        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 12px; position: relative">تنوع بالای محصول، ساختار ضعیف</h3>
-        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0; position: relative">صدها کد محصول در ساختاری که نه مشتری مرور می‌کند و نه گوگل می‌فهمد.</p>
-      </article>
-      <article style="position: relative; padding: 34px 30px; border-radius: 26px; background: #0E3243; overflow: hidden">
-        <span style="display: block; font-size: 13px; font-weight: 700; color: #FF9271; margin-bottom: 14px">۰۴</span>
-        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 12px; position: relative">تیم دیجیتال بدون سکان</h3>
-        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0; position: relative">تیم مشغول کار است، اما کسی کار را به هدف فروش گره نمی‌زند.</p>
-      </article>
+  <section id="method" style="max-width: 1280px; margin: 0 auto; padding: 100px 32px; position: relative">
+    <div style="position: absolute; inset-inline-start: 50%; inset-block-start: 0; width: 700px; height: 380px; transform: translateX(-50%); background: radial-gradient(ellipse at center, color-mix(in oklch, var(--a1) 12%, transparent), transparent 70%); pointer-events: none"></div>
+    <div style="text-align: center; max-width: 640px; margin: 0 auto 56px; position: relative">
+      <div style="font-size: 13px; letter-spacing: 0.14em; color: var(--a1); font-weight: 700; margin-bottom: 18px">روش کار</div>
+      <h2 style="font-size: clamp(28px, 4vw, 44px); font-weight: 800">چهار قدم تا <span style="color: var(--a1)">فروش</span></h2>
+      <p style="font-size: 17px; line-height: 1.9; margin: 16px 0 0; color: var(--dim)">جای تیم شما کار نمی‌کنم؛ به تیم جهت می‌دهم و پاسخ‌گو نگهش می‌دارم.</p>
     </div>
-  </section>
-
-  <section id="method" style="max-width: 1280px; margin: 0 auto; padding: 0 32px 100px">
-    <div style="font-size: 13px; letter-spacing: 0.12em; color: #FF9271; margin-bottom: 20px">۰۴ — روش کار</div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; align-items: end; margin-bottom: 56px">
-      <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800">چهار قدم تا فروش</h2>
-      <p style="font-size: 19px; line-height: 1.9; margin: 0; color: #FFB79E; font-weight: 600">جای تیم شما کار نمی‌کنم؛ به تیم جهت می‌دهم و پاسخ‌گو نگهش می‌دارم. اگر تیمی نیست، در ساختنش کنارتان هستم.</p>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; border-top: 1px solid var(--color-divider); padding-top: 34px">
-      <div>
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px"><span style="width: 12px; height: 12px; border-radius: 999px; background: #FF6D41"></span><span style="font-size: 13px; color: var(--dim)">قدم ۰۱</span></div>
-        <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 10px">عارضه‌یابی</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px">
+      <div style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
+        <div style="width: 52px; height: 52px; border-radius: 14px; border: 1px solid color-mix(in oklch, var(--a1) 40%, var(--color-divider)); display: flex; align-items: center; justify-content: center; margin-bottom: 20px">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+        </div>
+        <div class="a-num" style="font-size: 13px; color: var(--a2); font-weight: 700; margin-bottom: 8px">قدم ۰۱</div>
+        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 10px">عارضه‌یابی</h3>
         <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">گلوگاه واقعی فروش، نه علائم آن.</p>
       </div>
-      <div>
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px"><span style="width: 12px; height: 12px; border-radius: 999px; background: #FF6D41"></span><span style="font-size: 13px; color: var(--dim)">قدم ۰۲</span></div>
-        <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 10px">نقشه راه</h3>
+      <div style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
+        <div style="width: 52px; height: 52px; border-radius: 14px; border: 1px solid color-mix(in oklch, var(--a1) 40%, var(--color-divider)); display: flex; align-items: center; justify-content: center; margin-bottom: 20px">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20l-5.5 1.5L5 16 15.5 5.5a2.1 2.1 0 0 1 3 3L8 19l1-1z"></path><path d="M13 6l4 4"></path></svg>
+        </div>
+        <div class="a-num" style="font-size: 13px; color: var(--a2); font-weight: 700; margin-bottom: 8px">قدم ۰۲</div>
+        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 10px">نقشه راه</h3>
         <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">اقدام‌ها به‌ترتیب اثر روی فروش.</p>
       </div>
-      <div>
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px"><span style="width: 12px; height: 12px; border-radius: 999px; background: #FF6D41"></span><span style="font-size: 13px; color: var(--dim)">قدم ۰۳</span></div>
-        <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 10px">اجرا و نظارت</h3>
+      <div style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
+        <div style="width: 52px; height: 52px; border-radius: 14px; border: 1px solid color-mix(in oklch, var(--a1) 40%, var(--color-divider)); display: flex; align-items: center; justify-content: center; margin-bottom: 20px">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0A1.65 1.65 0 0 0 10 3.09V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        </div>
+        <div class="a-num" style="font-size: 13px; color: var(--a2); font-weight: 700; margin-bottom: 8px">قدم ۰۳</div>
+        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 10px">اجرا و نظارت</h3>
         <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">هدایت تیم و اصلاح مسیر پیش از هدررفت بودجه.</p>
       </div>
-      <div>
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px"><span style="width: 12px; height: 12px; border-radius: 999px; background: #FF6D41"></span><span style="font-size: 13px; color: var(--dim)">قدم ۰۴</span></div>
-        <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 10px">هوش مصنوعی</h3>
+      <div style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
+        <div style="width: 52px; height: 52px; border-radius: 14px; border: 1px solid color-mix(in oklch, var(--a1) 40%, var(--color-divider)); display: flex; align-items: center; justify-content: center; margin-bottom: 20px">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"></rect><path d="M9 9h.01M15 9h.01M9 15h6"></path></svg>
+        </div>
+        <div class="a-num" style="font-size: 13px; color: var(--a2); font-weight: 700; margin-bottom: 8px">قدم ۰۴</div>
+        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 10px">هوش مصنوعی</h3>
         <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">تحلیل داده و اتوماسیون محتوا برای نرخ تبدیل.</p>
       </div>
-    </div>
-    <div style="margin-top: 44px; display: flex; gap: 14px; flex-wrap: wrap">
-      <span style="font-size: 14px; padding: 10px 18px; border-radius: 999px; border: 1px solid var(--color-divider); color: var(--dim)">تحویل: گزارش عارضه‌یابی</span>
-      <span style="font-size: 14px; padding: 10px 18px; border-radius: 999px; border: 1px solid var(--color-divider); color: var(--dim)">نقشه راه زمان‌بندی‌شده</span>
-      <span style="font-size: 14px; padding: 10px 18px; border-radius: 999px; border: 1px solid var(--color-divider); color: var(--dim)">جلسات بازبینی دوره‌ای</span>
     </div>
   </section>
 
   <section id="record" style="background: #0E3243; padding: 100px 0">
     <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 56px; align-items: start">
       <div>
-        <div style="font-size: 13px; letter-spacing: 0.12em; color: #FF9271; margin-bottom: 20px">۰۵ — سابقه</div>
-        <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800; margin-bottom: 22px">تجربه‌ای که از صندلی مدیرعامل می‌آید، نه از اسلاید</h2>
-        <p style="font-size: 17px; line-height: 1.95; color: var(--dim); margin: 0 0 34px">کارم را از فروش آنلاین شروع کردم؛ در ۱۳۸۸ اولین فروشگاه اینترنتی مبلمان ایران را راه‌اندازی کردم و آن را تا یکی از بازیگران اصلی این صنعت رساندم. امروز همان تجربه را در قالب مشاوره به سازمان‌ها می‌دهم.</p>
-        <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap">
-          <img src="assets/logo-iranmiz.png" alt="ایران‌میز" style="height: 38px; width: 120px; object-fit: contain; opacity: 0.85">
-          <img src="assets/logo-dehban.webp" alt="آکادمی دهبان" style="height: 44px; width: 104px; object-fit: contain; opacity: 0.85">
-          <span style="font-size: 18px; font-weight: 700; color: var(--dim)">هامرز</span>
-          <span style="font-size: 18px; font-weight: 700; color: var(--dim)">مهرنت</span>
-        </div>
+        <div style="font-size: 13px; letter-spacing: 0.14em; color: var(--a1); font-weight: 700; margin-bottom: 20px">سابقه</div>
+        <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800; margin-bottom: 22px">تجربه‌ای که از <span style="color: var(--a1)">صندلی مدیرعامل</span> می‌آید، نه از اسلاید</h2>
+        <p style="font-size: 17px; line-height: 1.95; color: var(--dim); margin: 0">کارم را از فروش آنلاین شروع کردم؛ در ۱۳۸۸ اولین فروشگاه اینترنتی مبلمان ایران را راه‌اندازی کردم و آن را تا یکی از بازیگران اصلی این صنعت رساندم. امروز همان تجربه را در قالب مشاوره به سازمان‌ها می‌دهم.</p>
       </div>
       <div>
-        <div style="padding: 22px 0; border-top: 1px solid var(--color-divider)">
-          <div style="font-size: 19px; font-weight: 700">ایران‌میز — بنیان‌گذار و مدیرعامل</div>
-          <div style="font-size: 15px; color: var(--dim); margin-top: 8px">اولین فروشگاه اینترنتی مبلمان ایران · ۱۳۸۸ تا امروز</div>
+        <div style="display: flex; gap: 18px; padding: 22px 0; border-top: 1px solid var(--color-divider)">
+          <div style="flex: none; width: 46px; height: 46px; border-radius: 999px; background: color-mix(in oklch, var(--a1) 22%, transparent); display: flex; align-items: center; justify-content: center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"></path></svg>
+          </div>
+          <div>
+            <div style="font-size: 19px; font-weight: 700">ایران‌میز — بنیان‌گذار و مدیرعامل</div>
+            <div style="font-size: 15px; color: var(--dim); margin-top: 8px">اولین فروشگاه اینترنتی مبلمان ایران · ۱۳۸۸ تا امروز</div>
+          </div>
         </div>
-        <div style="padding: 22px 0; border-top: 1px solid var(--color-divider)">
-          <div style="font-size: 19px; font-weight: 700">آژانس دیجیتال مارکتینگ دهبان — مدیرعامل</div>
-          <div style="font-size: 15px; color: var(--dim); margin-top: 8px">۱۴۰۱ تا ۱۴۰۳</div>
+        <div style="display: flex; gap: 18px; padding: 22px 0; border-top: 1px solid var(--color-divider)">
+          <div style="flex: none; width: 46px; height: 46px; border-radius: 999px; background: color-mix(in oklch, var(--a2) 22%, transparent); display: flex; align-items: center; justify-content: center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--a2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7-7 18-3-8-8-3z"></path></svg>
+          </div>
+          <div>
+            <div style="font-size: 19px; font-weight: 700">آژانس دیجیتال مارکتینگ دهبان — مدیرعامل</div>
+            <div style="font-size: 15px; color: var(--dim); margin-top: 8px">۱۴۰۱ تا ۱۴۰۳</div>
+          </div>
         </div>
-        <div style="padding: 22px 0; border-block: 1px solid var(--color-divider)">
-          <div style="font-size: 19px; font-weight: 700">شرکت مهرنت — مدیرعامل</div>
-          <div style="font-size: 15px; color: var(--dim); margin-top: 8px">مدرس دوره هوش مصنوعی سازمان برنامه و بودجه</div>
+        <div style="display: flex; gap: 18px; padding: 22px 0; border-block: 1px solid var(--color-divider)">
+          <div style="flex: none; width: 46px; height: 46px; border-radius: 999px; background: color-mix(in oklch, var(--a3) 30%, transparent); display: flex; align-items: center; justify-content: center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--a3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0A1.65 1.65 0 0 0 10 3.09V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          </div>
+          <div>
+            <div style="font-size: 19px; font-weight: 700">شرکت مهرنت — مدیرعامل</div>
+            <div style="font-size: 15px; color: var(--dim); margin-top: 8px">مدرس دوره هوش مصنوعی سازمان برنامه و بودجه</div>
+          </div>
         </div>
         <div style="margin-top: 30px">
-          <div style="font-size: 15px; color: #FFB79E; font-weight: 600; margin-bottom: 12px">تدریس</div>
-          <div style="font-size: 16px; color: var(--dim); line-height: 1.95">هوش مصنوعی برای مدیران — مؤسسه ماهان<br>هوش مصنوعی — محققان سازمان برنامه و بودجه<br>دیجیتال مارکتینگ — آکادمی دهبان</div>
+          <div style="font-size: 15px; color: var(--a3); font-weight: 600; margin-bottom: 14px">تدریس</div>
+          <div style="display: flex; flex-direction: column; gap: 12px">
+            <div style="display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--dim)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <span>هوش مصنوعی برای مدیران — مؤسسه ماهان</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--dim)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <span>هوش مصنوعی — محققان سازمان برنامه و بودجه</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--dim)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <span>دیجیتال مارکتینگ — آکادمی دهبان</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" style="max-width: 1280px; margin: 0 auto; padding: 100px 32px">
-    <div style="background: #FF6D41; color: var(--ink); border-radius: 36px; padding: clamp(32px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 56px; align-items: center">
+  <section id="articles" style="max-width: 1280px; margin: 0 auto; padding: 100px 32px; position: relative">
+    <div style="position: absolute; inset-inline-start: 50%; inset-block-start: 0; width: 700px; height: 380px; transform: translateX(-50%); background: radial-gradient(ellipse at center, color-mix(in oklch, var(--a1) 12%, transparent), transparent 70%); pointer-events: none"></div>
+    <div style="text-align: center; max-width: 640px; margin: 0 auto 44px; position: relative">
+      <div style="font-size: 13px; letter-spacing: 0.14em; color: var(--a1); font-weight: 700; margin-bottom: 18px">بلاگ</div>
+      <h2 style="font-size: clamp(28px, 4vw, 44px); font-weight: 800">آخرین <span style="color: var(--a1)">مقالات</span></h2>
+      <div style="margin-top: 16px; display: inline-block; font-size: 12px; padding: 6px 14px; border-radius: var(--r-pill); border: 1px solid color-mix(in oklch, var(--a1) 40%, transparent); color: var(--a2)">عنوان‌های نمونه — با مقالات واقعی جایگزین می‌شود</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px">
+      <a href="#articles" class="a-link a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 30%, var(--color-divider)); border-radius: var(--r-card); overflow: hidden; display: flex; flex-direction: column">
+        <div style="aspect-ratio: 16/10"><image-slot id="article-strategy" shape="rect" placeholder="تصویر مقاله"></image-slot></div>
+        <div style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
+          <span style="font-size: 12px; letter-spacing: 0.1em; color: var(--a2); font-weight: 700">استراتژی</span>
+          <h3 style="font-size: 20px; font-weight: 700; line-height: 1.55">کدام کانال دیجیتال برای کسب‌وکار شما جواب می‌دهد؟</h3>
+          <span style="font-size: 14px; color: var(--dim)">۷ دقیقه مطالعه</span>
+        </div>
+      </a>
+      <a href="#articles" class="a-link a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 30%, var(--color-divider)); border-radius: var(--r-card); overflow: hidden; display: flex; flex-direction: column">
+        <div style="aspect-ratio: 16/10"><image-slot id="article-ai" shape="rect" placeholder="تصویر مقاله"></image-slot></div>
+        <div style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
+          <span style="font-size: 12px; letter-spacing: 0.1em; color: var(--a2); font-weight: 700">هوش مصنوعی</span>
+          <h3 style="font-size: 20px; font-weight: 700; line-height: 1.55">از آزمایش‌های پراکنده تا فرایند تکرارشدنی در سازمان</h3>
+          <span style="font-size: 14px; color: var(--dim)">۹ دقیقه مطالعه</span>
+        </div>
+      </a>
+      <a href="#articles" class="a-link a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 30%, var(--color-divider)); border-radius: var(--r-card); overflow: hidden; display: flex; flex-direction: column">
+        <div style="aspect-ratio: 16/10"><image-slot id="article-seo" shape="rect" placeholder="تصویر مقاله"></image-slot></div>
+        <div style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
+          <span style="font-size: 12px; letter-spacing: 0.1em; color: var(--a2); font-weight: 700">سئو</span>
+          <h3 style="font-size: 20px; font-weight: 700; line-height: 1.55">ساختار Hub &amp; Spoke برای فروشگاه‌های پرتنوع</h3>
+          <span style="font-size: 14px; color: var(--dim)">۶ دقیقه مطالعه</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="contact" style="max-width: 1280px; margin: 0 auto; padding: 0 32px 100px">
+    <div style="background: var(--a1); color: var(--ink); border-radius: var(--r-box); padding: clamp(32px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 56px; align-items: center">
       <div>
-        <h2 style="font-size: clamp(28px, 4.2vw, 44px); font-weight: 800; margin-bottom: 20px">یک جلسه ۴۵ دقیقه‌ای، بدون هزینه</h2>
-        <p style="font-size: 18px; line-height: 1.9; margin: 0 0 32px; color: #4F160A">وضعیت فروش آنلاین برندتان را با هم مرور می‌کنیم و صادقانه می‌گویم کجا جای رشد هست و کجا نیست.</p>
+        <div style="font-size: 13px; letter-spacing: 0.14em; color: var(--a5); font-weight: 700; margin-bottom: 16px">تماس</div>
+        <h2 style="font-size: clamp(28px, 4.2vw, 44px); font-weight: 800; margin-bottom: 20px">یک جلسه ۴۵ دقیقه‌ای، <span style="color: var(--a5)">بدون هزینه</span></h2>
+        <p style="font-size: 18px; line-height: 1.9; margin: 0 0 32px; color: var(--a5)">وضعیت فروش آنلاین برندتان را با هم مرور می‌کنیم و صادقانه می‌گویم کجا جای رشد هست و کجا نیست.</p>
         <div style="display: flex; gap: 14px; flex-wrap: wrap">
-          <a href="https://wa.me/989126589474" style="background: #0A2735; color: #F9F9F9; font-size: 16px; font-weight: 700; padding: 17px 32px; border-radius: 999px; text-decoration: none">شروع گفت‌وگو در واتساپ</a>
-          <a href="tel:+989126589474" style="border: 1px solid rgba(10,39,53,0.45); color: var(--ink); font-size: 16px; font-weight: 700; padding: 17px 32px; border-radius: 999px; text-decoration: none"><span class="a-num">۰۹۱۲۶۵۸۹۴۷۴</span></a>
+          <a href="https://wa.me/989126589474" style="background: #0A2735; color: #F9F9F9; font-size: 16px; font-weight: 700; padding: 17px 32px; border-radius: var(--r-pill); text-decoration: none">شروع گفت‌وگو در واتساپ</a>
+          <a href="tel:+989126589474" style="border: 1px solid rgba(10,39,53,0.45); color: var(--ink); font-size: 16px; font-weight: 700; padding: 17px 32px; border-radius: var(--r-pill); text-decoration: none"><span class="a-num">۰۹۱۲۶۵۸۹۴۷۴</span></a>
         </div>
       </div>
       <div>
-        <div style="display: flex; gap: 20px; padding: 20px 0; border-top: 1px solid rgba(10,39,53,0.28)">
-          <span class="a-num" style="font-size: 18px; font-weight: 800; min-width: 4ch">۱۵′</span>
-          <span style="font-size: 17px; line-height: 1.7">مرور سایت، جایگاه سئو و کانال‌های فروش فعلی</span>
+        <div style="display: flex; gap: 16px; padding: 20px 0; border-top: 1px solid rgba(10,39,53,0.28)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+          <div>
+            <span class="a-num" style="font-size: 18px; font-weight: 800">۱۵′</span>
+            <span style="font-size: 17px; line-height: 1.7"> — مرور سایت، جایگاه سئو و کانال‌های فروش فعلی</span>
+          </div>
         </div>
-        <div style="display: flex; gap: 20px; padding: 20px 0; border-top: 1px solid rgba(10,39,53,0.28)">
-          <span class="a-num" style="font-size: 18px; font-weight: 800; min-width: 4ch">۲۰′</span>
-          <span style="font-size: 17px; line-height: 1.7">دو یا سه فرصت رشد که از همین ماه شروع می‌شود</span>
+        <div style="display: flex; gap: 16px; padding: 20px 0; border-top: 1px solid rgba(10,39,53,0.28)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M13 2L3 14h7l-1 8 11-14h-7l1-6z"></path></svg>
+          <div>
+            <span class="a-num" style="font-size: 18px; font-weight: 800">۲۰′</span>
+            <span style="font-size: 17px; line-height: 1.7"> — دو یا سه فرصت رشد که از همین ماه شروع می‌شود</span>
+          </div>
         </div>
-        <div style="display: flex; gap: 20px; padding: 20px 0; border-block: 1px solid rgba(10,39,53,0.28)">
-          <span class="a-num" style="font-size: 18px; font-weight: 800; min-width: 4ch">۱۰′</span>
-          <span style="font-size: 17px; line-height: 1.7">پیشنهاد شکل همکاری، اگر برای هر دو طرف منطقی بود</span>
+        <div style="display: flex; gap: 16px; padding: 20px 0; border-block: 1px solid rgba(10,39,53,0.28)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          <div>
+            <span class="a-num" style="font-size: 18px; font-weight: 800">۱۰′</span>
+            <span style="font-size: 17px; line-height: 1.7"> — پیشنهاد شکل همکاری، اگر برای هر دو طرف منطقی بود</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <footer style="border-top: 1px solid var(--color-divider); padding: 48px 0 34px">
-    <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 36px; align-items: start">
+  <footer style="border-top: 1px solid var(--color-divider); padding: 56px 0 34px">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 36px; align-items: start; margin-bottom: 36px">
       <div>
         <div style="font-size: 18px; font-weight: 800; margin-bottom: 10px">مهدی تنه‌کار</div>
         <div style="font-size: 15px; color: var(--dim); line-height: 1.8">مشاور کسب‌وکار، دیجیتال مارکتینگ و هوش مصنوعی</div>
       </div>
       <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+        <span style="font-size: 13px; color: var(--dim); margin-bottom: 4px">نقشه سایت</span>
+        <a class="a-link" href="#services">خدمات</a>
+        <a class="a-link" href="#case">مطالعه موردی</a>
+        <a class="a-link" href="#method">روش کار</a>
+        <a class="a-link" href="#record">سابقه</a>
+        <a class="a-link" href="#articles">مقالات</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+        <span style="font-size: 13px; color: var(--dim); margin-bottom: 4px">تماس</span>
         <a class="a-link" href="https://wa.me/989126589474">واتساپ <span class="a-num">۰۹۱۲۶۵۸۹۴۷۴</span></a>
         <a class="a-link" href="tel:+982126422742"><span class="a-num">۰۲۱ ۲۶۴۲۲۷۴۲</span></a>
         <a class="a-link" href="mailto:mehditanekar@gmail.com"><span class="a-num">mehditanekar@gmail.com</span></a>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
-        <a class="a-link" href="#questions">سه سؤال</a>
-        <a class="a-link" href="#case">مطالعه موردی</a>
-        <a class="a-link" href="#method">روش کار</a>
-        <a class="a-link" href="#record">سابقه</a>
-      </div>
-      <div style="font-size: 14px; color: var(--dim)">© ۱۴۰۵ · <span class="a-num">mehditanekar.ir</span></div>
     </div>
+    <div style="max-width: 1280px; margin: 0 auto; padding-top: 24px; padding-inline: 32px; border-top: 1px solid var(--color-divider); font-size: 14px; color: var(--dim)">© ۱۴۰۵ مهدی تنه‌کار · <span class="a-num">mehditanekar.ir</span></div>
   </footer>
 </div>
 </body>
