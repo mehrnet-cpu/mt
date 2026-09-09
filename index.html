@@ -298,8 +298,11 @@ textarea.input { min-height: 90px; resize: vertical; }
     .a-card:hover { transform: translateY(-4px); border-color: color-mix(in oklch, var(--a1) 50%, transparent); }
     ::selection { background: color-mix(in oklch, var(--a1) 40%, transparent); }
     @media (max-width: 700px) {
-      .a-nav { display: none; }
-      .a-hero-top { padding-top: 120px !important; }
+      .a-nav { display: none !important; }
+      .a-header-row { padding: 14px 20px !important; gap: 14px !important; }
+      .a-header-row .a-brand { font-size: 15px !important; }
+      .a-header-row .a-cta { font-size: 13px !important; padding: 10px 16px !important; }
+      .a-hero-top { padding-top: 96px !important; }
       .a-pad-lg { padding-top: 64px !important; padding-bottom: 64px !important; }
       .a-pad-lg-x { padding-left: 20px !important; padding-right: 20px !important; }
       .a-stats-grid { grid-template-columns: 1fr !important; }
@@ -314,8 +317,8 @@ textarea.input { min-height: 90px; resize: vertical; }
 <div dir="rtl" style="background: #0A2735; color: #F9F9F9; min-height: 100vh; overflow-x: hidden; --a1: #FF6D41; --a2: #FF9271; --a3: #FFB79E; --a4: #B33D1B; --a5: #4F160A; --r-pill: 999px; --r-card: 24px; --r-img: 32px; --r-box: 36px; --card-border: var(--color-divider); --card-shadow: none; --card-bg: transparent">
 
   <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 20; backdrop-filter: blur(14px); background: rgba(10,39,53,0.85); border-bottom: 1px solid var(--color-divider)">
-    <div style="max-width: 1280px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap">
-      <a href="#top" class="a-link" style="font-size: 18px; font-weight: 800; margin-inline-end: auto">دکتر مهدی تنه‌کار</a>
+    <div class="a-header-row" style="max-width: 1280px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; gap: 32px; flex-wrap: nowrap">
+      <a href="#top" class="a-link a-brand" style="font-size: 18px; font-weight: 800; margin-inline-end: auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">دکتر مهدی تنه‌کار</a>
       <nav class="a-nav" style="display: flex; align-items: center; gap: 26px; font-size: 14px; color: var(--dim); flex-wrap: wrap">
         <a href="#services" class="a-link">خدمات</a>
         <a href="#case" class="a-link">مطالعه موردی</a>
