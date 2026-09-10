@@ -15,6 +15,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="_ds/organic-1d2dcbeb-1dfd-4fe3-a4bf-da8ee0fd76c6/styles.css">
+  <script src="_ds/organic-1d2dcbeb-1dfd-4fe3-a4bf-da8ee0fd76c6/_ds_bundle.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&amp;display=swap">
+  <script src="./image-slot.js"></script>
 <style>
 /* Organic — design-system tokens and component classes. This file is the source of truth for the system's look; retune it here and see readme.md. */
 
@@ -312,6 +318,10 @@ textarea.input { min-height: 90px; resize: vertical; }
       h1 { font-size: 34px !important; }
       h2 { font-size: 28px !important; }
     }
+    @keyframes assemble-top { from { transform: translateY(-160px) rotate(-8deg); opacity: 0 } to { transform: none; opacity: 1 } }
+    @keyframes assemble-bottom { from { transform: translateY(160px) rotate(8deg); opacity: 0 } to { transform: none; opacity: 1 } }
+    @keyframes assemble-left { from { transform: translateX(-180px) rotate(-10deg); opacity: 0 } to { transform: none; opacity: 1 } }
+    @keyframes assemble-right { from { transform: translateX(180px) rotate(10deg); opacity: 0 } to { transform: none; opacity: 1 } }
 </style>
 </head>
 <body>
@@ -320,12 +330,12 @@ textarea.input { min-height: 90px; resize: vertical; }
   <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 20; backdrop-filter: blur(14px); background: rgba(10,39,53,0.85); border-bottom: 1px solid var(--color-divider)">
     <div class="a-header-row" style="max-width: 1280px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; gap: 32px; flex-wrap: nowrap">
       <a href="#top" class="a-link a-brand" style="margin-inline-end: auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; flex-direction: column; gap: 2px; line-height: 1.2"><span style="font-size: 21px; font-weight: 800">مهدی تنه‌کار</span><span style="font-size: 15px; font-weight: 400; color: var(--dim)">مشاور کسب و کار</span></a>
-      <nav class="a-nav" style="display: flex; align-items: center; gap: 26px; font-size: 14px; color: var(--dim); flex-wrap: wrap">
+      <nav class="a-nav" style="display: flex; align-items: center; gap: 26px; font-size: 16px; font-weight: 500; color: var(--dim); flex-wrap: wrap">
         <a href="#services" class="a-link">خدمات</a>
         <a href="#case" class="a-link">مطالعه موردی</a>
         <a href="#method" class="a-link">روش کار</a>
         <a href="#record" class="a-link">سابقه</a>
-        <a href="#articles" class="a-link">مقالات</a>
+        <a href="/بلاگ" class="a-link">مقالات</a>
       </nav>
       <a class="a-cta" href="https://wa.me/989126589474" style="background: var(--a1); color: var(--ink); font-size: 14px; font-weight: 700; padding: 12px 22px; border-radius: var(--r-pill); text-decoration: none; white-space: nowrap">رزرو مشاوره</a>
       <button class="a-burger" onclick="var n=document.getElementById('mobile-menu');n.style.display=n.style.display==='flex'?'none':'flex';" aria-label="منو" style="display: none; align-items: center; justify-content: center; width: 40px; height: 40px; background: transparent; border: 1px solid var(--color-divider); border-radius: 10px; flex-direction: column; gap: 4px; flex-shrink: 0">
@@ -339,7 +349,7 @@ textarea.input { min-height: 90px; resize: vertical; }
       <a href="#case" class="a-link" onclick="document.getElementById('mobile-menu').style.display='none';" style="padding: 12px 8px; font-size: 15px">مطالعه موردی</a>
       <a href="#method" class="a-link" onclick="document.getElementById('mobile-menu').style.display='none';" style="padding: 12px 8px; font-size: 15px">روش کار</a>
       <a href="#record" class="a-link" onclick="document.getElementById('mobile-menu').style.display='none';" style="padding: 12px 8px; font-size: 15px">سابقه</a>
-      <a href="#articles" class="a-link" onclick="document.getElementById('mobile-menu').style.display='none';" style="padding: 12px 8px; font-size: 15px">مقالات</a>
+      <a href="/بلاگ" class="a-link" onclick="document.getElementById('mobile-menu').style.display='none';" style="padding: 12px 8px; font-size: 15px">مقالات</a>
     </nav>
   </header>
 
@@ -350,17 +360,17 @@ textarea.input { min-height: 90px; resize: vertical; }
         <span style="font-size: 13px; padding: 7px 16px; border-radius: var(--r-pill); border: 1px solid var(--color-divider); color: var(--dim)">تیم‌سازی</span>
         <span style="font-size: 13px; padding: 7px 16px; border-radius: var(--r-pill); border: 1px solid var(--color-divider); color: var(--dim)">هوش مصنوعی سازمانی</span>
       </div>
-      <h1 style="font-size: clamp(36px, 5.4vw, 64px); font-weight: 800; line-height: 1.2; margin: 0 0 26px">فروش آنلاین برندتان<br><span style="color: var(--a1)">دارایی</span> شماست!</h1>
-      <p style="font-size: 19px; line-height: 1.95; color: var(--dim); max-width: 46ch; margin: 0 0 38px; text-wrap: pretty">کانال فروش مستقل می‌سازیم: استراتژی، رهبری تیم دیجیتال و هوش مصنوعی در فرایندهای واقعی سازمان — با سنجش اثر روی عدد فروش.</p>
+      <h1 style="font-size: clamp(36px, 5.4vw, 64px); font-weight: 800; line-height: 1.2; margin: 0 0 26px">فروش آنلاین برندتان<br><span style="color: var(--a1);">دارایی</span> شماست!</h1>
+      <p style="font-size: 18px; line-height: 1.95; color: var(--dim); max-width: 46ch; margin: 0 0 38px; text-wrap: pretty">کانال فروش مستقل می‌سازیم: استراتژی، رهبری تیم دیجیتال و هوش مصنوعی در فرایندهای واقعی سازمان — با سنجش اثر روی عدد فروش.</p>
       <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center">
         <a class="a-cta" href="https://wa.me/989126589474" style="background: var(--a1); color: var(--ink); font-size: 16px; font-weight: 700; padding: 17px 34px; border-radius: var(--r-pill); text-decoration: none">درخواست جلسه بدون هزینه</a>
         <a class="a-link" href="tel:+982126422742" style="font-size: 16px; font-weight: 600; padding: 17px 26px; border: 1px solid var(--color-divider); border-radius: var(--r-pill); text-decoration: none"><span class="a-num">۰۲۱ ۲۶۴۲۲۷۴۲</span></a>
       </div>
     </div>
-    <div style="position: relative; max-width: 380px; margin-inline-start: auto">
+    <div style="position: relative; width: 100%; max-width: 380px; margin-inline-start: auto">
       <div style="position: absolute; inset-block-start: -26px; inset-inline-start: -26px; width: 148px; height: 148px; border-radius: 999px; border: 1px solid color-mix(in oklch, var(--a1) 50%, transparent)"></div>
-      <div id="hero-img-wrap" style="position: relative; border-radius: var(--r-img); overflow: hidden; aspect-ratio: 4/5; box-shadow: 0 20px 50px rgba(0,0,0,0.35); will-change: transform">
-        <img id="hero-img" src="assets/mehdi-portrait.jpg" alt="مهدی تنه‌کار" style="width: 100%; height: 112%; object-fit: cover; will-change: transform, filter; filter: grayscale(1) blur(6px)">
+      <div style="position: relative; width: 100%; border-radius: var(--r-img); overflow: hidden; aspect-ratio: 4/5; box-shadow: 0 20px 50px rgba(0,0,0,0.35)">
+        <img src="assets/mehdi-portrait.jpg" alt="مهدی تنه‌کار" style="width: 100%; height: 100%; object-fit: cover">
       </div>
     </div>
   </section>
@@ -392,22 +402,27 @@ textarea.input { min-height: 90px; resize: vertical; }
   </div>
 
   <section style="max-width: 1280px; margin: 0 auto; padding: 68px 32px 0">
-    <p style="font-size: 13px; letter-spacing: 0.14em; color: var(--dim); margin-bottom: 28px; text-align: center">برندهایی که با آن‌ها کار کرده‌ام</p>
+    <p style="font-size: 15px; letter-spacing: 0.08em; color: var(--dim); margin-bottom: 28px; text-align: center">برندهایی که با آن‌ها کار کرده‌ام</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px">
-      <div class="a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+      <a href="https://www.iranmiz.com/" target="_blank" rel="noopener" class="a-link a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 96px; text-decoration: none">
         <img src="assets/logo-iranmiz.png" alt="ایران‌میز" style="height: 48px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
-      </div>
-      <div class="a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+        <span style="font-size: 13px; color: var(--dim)">ایران‌میز</span>
+      </a>
+      <div class="a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 96px">
         <img src="assets/logo-jpa.png" alt="جامه‌پوش آرا" style="height: 60px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
+        <span style="font-size: 13px; color: var(--dim)">جامه‌پوش آرا</span>
       </div>
-      <div class="a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+      <div class="a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 96px">
         <img src="assets/logo-dehban.webp" alt="آکادمی دهبان" style="height: 52px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
+        <span style="font-size: 13px; color: var(--dim)">آکادمی دهبان</span>
       </div>
-      <div class="a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+      <div class="a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 96px">
         <img src="assets/logo-hamerz.webp" alt="هامرز" style="height: 40px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
+        <span style="font-size: 13px; color: var(--dim)">هامرز</span>
       </div>
-      <div class="a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; align-items: center; justify-content: center; min-height: 96px">
+      <div class="a-card" style="background: rgba(249,249,249,0.04); border-radius: 16px; padding: 30px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 96px">
         <img src="assets/logo-mehrnet.png" alt="مهرنت" style="height: 40px; width: auto; max-width: 100%; object-fit: contain; filter: grayscale(1) brightness(2); opacity: 0.55">
+        <span style="font-size: 13px; color: var(--dim)">مهرنت</span>
       </div>
     </div>
   </section>
@@ -425,13 +440,13 @@ textarea.input { min-height: 90px; resize: vertical; }
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"></path><path d="M17 6h6v6"></path></svg>
         </div>
         <div>
-          <div style="font-size: 30px; font-weight: 800; color: var(--a1); line-height: 1.2">عارضه‌یابی</div>
-          <div style="font-size: 18px; font-weight: 700; margin-top: 4px">مشاوره دیجیتال مارکتینگ</div>
+          <div style="font-size: 28px; font-weight: 800; color: var(--a1); line-height: 1.2">عارضه‌یابی</div>
+          <div style="font-size: 19px; font-weight: 700; margin-top: 4px">مشاوره دیجیتال مارکتینگ</div>
         </div>
-        <p style="font-size: 15px; line-height: 1.85; color: var(--dim); margin: 0">ممیزی وضعیت فعلی، انتخاب کانال‌ها بر اساس سهم واقعی‌شان از فروش، و معماری سئو و محتوا.</p>
+        <p style="font-size: 16px; line-height: 1.85; color: var(--dim); margin: 0">ممیزی وضعیت فعلی، انتخاب کانال‌ها بر اساس سهم واقعی‌شان از فروش، و معماری سئو و محتوا.</p>
         <div style="display: flex; flex-direction: column; gap: 14px; font-size: 15px; margin-top: 6px">
-          <div style="display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>ممیزی کانال‌های فروش</span></div>
-          <div style="display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>معماری سئو و محتوا</span></div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 16px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>ممیزی کانال‌های فروش</span></div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 16px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>معماری سئو و محتوا</span></div>
         </div>
       </article>
       <article class="a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 30%, var(--color-divider)); border-radius: var(--r-card); padding: 40px 32px; display: flex; flex-direction: column; gap: 22px; background: radial-gradient(120px 90px at 70px 60px, color-mix(in oklch, var(--a1) 16%, transparent), transparent)">
@@ -439,13 +454,13 @@ textarea.input { min-height: 90px; resize: vertical; }
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
         </div>
         <div>
-          <div style="font-size: 30px; font-weight: 800; color: var(--a1); line-height: 1.2">اجرا</div>
-          <div style="font-size: 18px; font-weight: 700; margin-top: 4px">تیم‌سازی و نظارت بر تیم فنی</div>
+          <div style="font-size: 28px; font-weight: 800; color: var(--a1); line-height: 1.2">اجرا</div>
+          <div style="font-size: 19px; font-weight: 700; margin-top: 4px">تیم‌سازی و نظارت بر تیم فنی</div>
         </div>
-        <p style="font-size: 15px; line-height: 1.85; color: var(--dim); margin: 0">هدف‌گذاری، تقسیم کار و بازبینی هفتگی تیم محتوا، سئو و تبلیغات — یا ساختن تیم از صفر.</p>
+        <p style="font-size: 16px; line-height: 1.85; color: var(--dim); margin: 0">هدف‌گذاری، تقسیم کار و بازبینی هفتگی تیم محتوا، سئو و تبلیغات — یا ساختن تیم از صفر.</p>
         <div style="display: flex; flex-direction: column; gap: 14px; font-size: 15px; margin-top: 6px">
-          <div style="display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>ساختار و استخدام تیم</span></div>
-          <div style="display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>بازبینی دوره‌ای عملکرد</span></div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 16px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>ساختار و استخدام تیم</span></div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 16px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>بازبینی دوره‌ای عملکرد</span></div>
         </div>
       </article>
       <article class="a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 30%, var(--color-divider)); border-radius: var(--r-card); padding: 40px 32px; display: flex; flex-direction: column; gap: 22px; background: radial-gradient(120px 90px at 70px 60px, color-mix(in oklch, var(--a1) 16%, transparent), transparent)">
@@ -453,13 +468,13 @@ textarea.input { min-height: 90px; resize: vertical; }
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7-7 18-3-8-8-3z"></path></svg>
         </div>
         <div>
-          <div style="font-size: 30px; font-weight: 800; color: var(--a1); line-height: 1.2">مقیاس</div>
-          <div style="font-size: 18px; font-weight: 700; margin-top: 4px">پیاده‌سازی هوش مصنوعی در سازمان</div>
+          <div style="font-size: 28px; font-weight: 800; color: var(--a1); line-height: 1.2">مقیاس</div>
+          <div style="font-size: 19px; font-weight: 700; margin-top: 4px">پیاده‌سازی هوش مصنوعی در سازمان</div>
         </div>
-        <p style="font-size: 15px; line-height: 1.85; color: var(--dim); margin: 0">تحلیل داده، اتوماسیون محتوا و انتخاب ابزار — با فرایند تکرارشدنی و آموزش تیم.</p>
+        <p style="font-size: 16px; line-height: 1.85; color: var(--dim); margin: 0">تحلیل داده، اتوماسیون محتوا و انتخاب ابزار — با فرایند تکرارشدنی و آموزش تیم.</p>
         <div style="display: flex; flex-direction: column; gap: 14px; font-size: 15px; margin-top: 6px">
-          <div style="display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>اتوماسیون فرایند با AI</span></div>
-          <div style="display: flex; align-items: center; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>آموزش تیم برای استفاده روزمره</span></div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 16px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>اتوماسیون فرایند با AI</span></div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 16px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" style="flex: none"><circle cx="12" cy="12" r="10"></circle><path d="M8 12l3 3 5-6"></path></svg><span>آموزش تیم برای استفاده روزمره</span></div>
         </div>
       </article>
     </div>
@@ -573,32 +588,32 @@ textarea.input { min-height: 90px; resize: vertical; }
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.3-4.3"></path></svg>
         </div>
         <div class="a-num" style="font-size: 13px; color: var(--a2); font-weight: 700; margin-bottom: 8px">قدم ۰۱</div>
-        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 10px">عارضه‌یابی</h3>
-        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">گلوگاه واقعی فروش، نه علائم آن.</p>
+        <h3 style="font-size: 19px; font-weight: 700; margin-bottom: 10px">عارضه‌یابی</h3>
+        <p style="font-size: 15px; line-height: 1.9; color: var(--dim); margin: 0">گلوگاه واقعی فروش، نه علائم آن.</p>
       </div>
       <div class="a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
         <div style="width: 52px; height: 52px; border-radius: 14px; border: 1px solid color-mix(in oklch, var(--a1) 40%, var(--color-divider)); display: flex; align-items: center; justify-content: center; margin-bottom: 20px">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 20l-5.5 1.5L5 16 15.5 5.5a2.1 2.1 0 0 1 3 3L8 19l1-1z"></path><path d="M13 6l4 4"></path></svg>
         </div>
         <div class="a-num" style="font-size: 13px; color: var(--a2); font-weight: 700; margin-bottom: 8px">قدم ۰۲</div>
-        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 10px">نقشه راه</h3>
-        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">اقدام‌ها به‌ترتیب اثر روی فروش.</p>
+        <h3 style="font-size: 19px; font-weight: 700; margin-bottom: 10px">نقشه راه</h3>
+        <p style="font-size: 15px; line-height: 1.9; color: var(--dim); margin: 0">اقدام‌ها به‌ترتیب اثر روی فروش.</p>
       </div>
       <div class="a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
         <div style="width: 52px; height: 52px; border-radius: 14px; border: 1px solid color-mix(in oklch, var(--a1) 40%, var(--color-divider)); display: flex; align-items: center; justify-content: center; margin-bottom: 20px">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0A1.65 1.65 0 0 0 10 3.09V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
         </div>
         <div class="a-num" style="font-size: 13px; color: var(--a2); font-weight: 700; margin-bottom: 8px">قدم ۰۳</div>
-        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 10px">اجرا و نظارت</h3>
-        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">هدایت تیم و اصلاح مسیر پیش از هدررفت بودجه.</p>
+        <h3 style="font-size: 19px; font-weight: 700; margin-bottom: 10px">اجرا و نظارت</h3>
+        <p style="font-size: 15px; line-height: 1.9; color: var(--dim); margin: 0">هدایت تیم و اصلاح مسیر پیش از هدررفت بودجه.</p>
       </div>
       <div class="a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 25%, var(--color-divider)); border-radius: var(--r-card); padding: 28px; background: radial-gradient(90px 70px at 30px 30px, color-mix(in oklch, var(--a1) 14%, transparent), transparent)">
         <div style="width: 52px; height: 52px; border-radius: 14px; border: 1px solid color-mix(in oklch, var(--a1) 40%, var(--color-divider)); display: flex; align-items: center; justify-content: center; margin-bottom: 20px">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"></rect><path d="M9 9h.01M15 9h.01M9 15h6"></path></svg>
         </div>
         <div class="a-num" style="font-size: 13px; color: var(--a2); font-weight: 700; margin-bottom: 8px">قدم ۰۴</div>
-        <h3 style="font-size: 21px; font-weight: 700; margin-bottom: 10px">هوش مصنوعی</h3>
-        <p style="font-size: 16px; line-height: 1.9; color: var(--dim); margin: 0">تحلیل داده و اتوماسیون محتوا برای نرخ تبدیل.</p>
+        <h3 style="font-size: 19px; font-weight: 700; margin-bottom: 10px">هوش مصنوعی</h3>
+        <p style="font-size: 15px; line-height: 1.9; color: var(--dim); margin: 0">تحلیل داده و اتوماسیون محتوا برای نرخ تبدیل.</p>
       </div>
     </div>
   </section>
@@ -608,7 +623,7 @@ textarea.input { min-height: 90px; resize: vertical; }
       <div>
         <div style="font-size: 13px; letter-spacing: 0.14em; color: var(--a1); font-weight: 700; margin-bottom: 20px">سابقه</div>
         <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800; margin-bottom: 22px">تجربه‌ای که از <span style="color: var(--a1)">صندلی مدیرعامل</span> می‌آید، نه از اسلاید</h2>
-        <p style="font-size: 17px; line-height: 1.95; color: var(--dim); margin: 0">کارم را از فروش آنلاین شروع کردم؛ در ۱۳۸۸ اولین فروشگاه اینترنتی مبلمان ایران را راه‌اندازی کردم و آن را تا یکی از بازیگران اصلی این صنعت رساندم. امروز همان تجربه را در قالب مشاوره به سازمان‌ها می‌دهم.</p>
+        <p style="font-size: 17px; line-height: 1.9; color: var(--dim); margin: 0">کارم را از فروش آنلاین شروع کردم؛ در ۱۳۸۸ اولین فروشگاه اینترنتی مبلمان ایران را راه‌اندازی کردم و آن را تا یکی از بازیگران اصلی این صنعت رساندم. امروز همان تجربه را در قالب مشاوره به سازمان‌ها می‌دهم.</p>
       </div>
       <div>
         <div style="display: flex; gap: 18px; padding: 22px 0; border-top: 1px solid var(--color-divider)">
@@ -616,7 +631,7 @@ textarea.input { min-height: 90px; resize: vertical; }
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--a1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"></path></svg>
           </div>
           <div>
-            <div style="font-size: 19px; font-weight: 700">ایران‌میز — بنیان‌گذار و مدیرعامل</div>
+            <div style="font-size: 18px; font-weight: 700">ایران‌میز — بنیان‌گذار و مدیرعامل</div>
             <div style="font-size: 15px; color: var(--dim); margin-top: 8px">اولین فروشگاه اینترنتی مبلمان ایران · ۱۳۸۸ تا امروز</div>
           </div>
         </div>
@@ -625,7 +640,7 @@ textarea.input { min-height: 90px; resize: vertical; }
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--a2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-7-7 18-3-8-8-3z"></path></svg>
           </div>
           <div>
-            <div style="font-size: 19px; font-weight: 700">آژانس دیجیتال مارکتینگ دهبان — مدیرعامل</div>
+            <div style="font-size: 18px; font-weight: 700">آژانس دیجیتال مارکتینگ دهبان — مدیرعامل</div>
             <div style="font-size: 15px; color: var(--dim); margin-top: 8px">۱۴۰۱ تا ۱۴۰۳</div>
           </div>
         </div>
@@ -634,22 +649,22 @@ textarea.input { min-height: 90px; resize: vertical; }
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--a3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0A1.65 1.65 0 0 0 10 3.09V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
           </div>
           <div>
-            <div style="font-size: 19px; font-weight: 700">شرکت مهرنت — مدیرعامل</div>
+            <div style="font-size: 18px; font-weight: 700">شرکت مهرنت — مدیرعامل</div>
             <div style="font-size: 15px; color: var(--dim); margin-top: 8px">مدرس دوره هوش مصنوعی سازمان برنامه و بودجه</div>
           </div>
         </div>
         <div style="margin-top: 30px">
           <div style="font-size: 15px; color: var(--a3); font-weight: 600; margin-bottom: 14px">تدریس</div>
           <div style="display: flex; flex-direction: column; gap: 12px">
-            <div style="display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--dim)">
+            <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--dim)">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
               <span>هوش مصنوعی برای مدیران — مؤسسه ماهان</span>
             </div>
-            <div style="display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--dim)">
+            <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--dim)">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
               <span>هوش مصنوعی — محققان سازمان برنامه و بودجه</span>
             </div>
-            <div style="display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--dim)">
+            <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--dim)">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--a2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
               <span>دیجیتال مارکتینگ — آکادمی دهبان</span>
             </div>
@@ -670,25 +685,25 @@ textarea.input { min-height: 90px; resize: vertical; }
       <a href="#articles" class="a-link a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 30%, var(--color-divider)); border-radius: var(--r-card); overflow: hidden; display: flex; flex-direction: column">
         <div style="aspect-ratio: 16/10"><image-slot id="article-strategy" shape="rect" placeholder="تصویر مقاله"></image-slot></div>
         <div style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
-          <span style="font-size: 12px; letter-spacing: 0.1em; color: var(--a2); font-weight: 700">استراتژی</span>
-          <h3 style="font-size: 20px; font-weight: 700; line-height: 1.55">کدام کانال دیجیتال برای کسب‌وکار شما جواب می‌دهد؟</h3>
-          <span style="font-size: 14px; color: var(--dim)">۷ دقیقه مطالعه</span>
+          <span style="font-size: 13px; letter-spacing: 0.1em; color: var(--a2); font-weight: 700">استراتژی</span>
+          <h3 style="font-size: 19px; font-weight: 700; line-height: 1.55">کدام کانال دیجیتال برای کسب‌وکار شما جواب می‌دهد؟</h3>
+          <span style="font-size: 13px; color: var(--dim)">۷ دقیقه مطالعه</span>
         </div>
       </a>
       <a href="#articles" class="a-link a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 30%, var(--color-divider)); border-radius: var(--r-card); overflow: hidden; display: flex; flex-direction: column">
         <div style="aspect-ratio: 16/10"><image-slot id="article-ai" shape="rect" placeholder="تصویر مقاله"></image-slot></div>
         <div style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
-          <span style="font-size: 12px; letter-spacing: 0.1em; color: var(--a2); font-weight: 700">هوش مصنوعی</span>
-          <h3 style="font-size: 20px; font-weight: 700; line-height: 1.55">از آزمایش‌های پراکنده تا فرایند تکرارشدنی در سازمان</h3>
-          <span style="font-size: 14px; color: var(--dim)">۹ دقیقه مطالعه</span>
+          <span style="font-size: 13px; letter-spacing: 0.1em; color: var(--a2); font-weight: 700">هوش مصنوعی</span>
+          <h3 style="font-size: 19px; font-weight: 700; line-height: 1.55">از آزمایش‌های پراکنده تا فرایند تکرارشدنی در سازمان</h3>
+          <span style="font-size: 13px; color: var(--dim)">۹ دقیقه مطالعه</span>
         </div>
       </a>
       <a href="#articles" class="a-link a-card" style="border: 1px solid color-mix(in oklch, var(--a1) 30%, var(--color-divider)); border-radius: var(--r-card); overflow: hidden; display: flex; flex-direction: column">
         <div style="aspect-ratio: 16/10"><image-slot id="article-seo" shape="rect" placeholder="تصویر مقاله"></image-slot></div>
         <div style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
-          <span style="font-size: 12px; letter-spacing: 0.1em; color: var(--a2); font-weight: 700">سئو</span>
-          <h3 style="font-size: 20px; font-weight: 700; line-height: 1.55">ساختار Hub &amp; Spoke برای فروشگاه‌های پرتنوع</h3>
-          <span style="font-size: 14px; color: var(--dim)">۶ دقیقه مطالعه</span>
+          <span style="font-size: 13px; letter-spacing: 0.1em; color: var(--a2); font-weight: 700">سئو</span>
+          <h3 style="font-size: 19px; font-weight: 700; line-height: 1.55">ساختار Hub &amp; Spoke برای فروشگاه‌های پرتنوع</h3>
+          <span style="font-size: 13px; color: var(--dim)">۶ دقیقه مطالعه</span>
         </div>
       </a>
     </div>
@@ -699,7 +714,7 @@ textarea.input { min-height: 90px; resize: vertical; }
       <div>
         <div style="font-size: 13px; letter-spacing: 0.14em; color: var(--a5); font-weight: 700; margin-bottom: 16px">تماس</div>
         <h2 style="font-size: clamp(28px, 4.2vw, 44px); font-weight: 800; margin-bottom: 20px">یک جلسه ۴۵ دقیقه‌ای، <span style="color: var(--a5)">بدون هزینه</span></h2>
-        <p style="font-size: 18px; line-height: 1.9; margin: 0 0 32px; color: var(--a5)">وضعیت فروش آنلاین برندتان را با هم مرور می‌کنیم و صادقانه می‌گویم کجا جای رشد هست و کجا نیست.</p>
+        <p style="font-size: 17px; line-height: 1.9; margin: 0 0 32px; color: var(--a5)">وضعیت فروش آنلاین برندتان را با هم مرور می‌کنیم و صادقانه می‌گویم کجا جای رشد هست و کجا نیست.</p>
         <div style="display: flex; gap: 14px; flex-wrap: wrap">
           <a href="https://wa.me/989126589474" style="background: #0A2735; color: #F9F9F9; font-size: 16px; font-weight: 700; padding: 17px 32px; border-radius: var(--r-pill); text-decoration: none">شروع گفت‌وگو در واتساپ</a>
           <a href="tel:+989126589474" style="border: 1px solid rgba(10,39,53,0.45); color: var(--ink); font-size: 16px; font-weight: 700; padding: 17px 32px; border-radius: var(--r-pill); text-decoration: none"><span class="a-num">۰۹۱۲۶۵۸۹۴۷۴</span></a>
@@ -710,21 +725,21 @@ textarea.input { min-height: 90px; resize: vertical; }
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.3-4.3"></path></svg>
           <div>
             <span class="a-num" style="font-size: 18px; font-weight: 800">۱۵′</span>
-            <span style="font-size: 17px; line-height: 1.7"> — مرور سایت، جایگاه سئو و کانال‌های فروش فعلی</span>
+            <span style="font-size: 16px; line-height: 1.7"> — مرور سایت، جایگاه سئو و کانال‌های فروش فعلی</span>
           </div>
         </div>
         <div style="display: flex; gap: 16px; padding: 20px 0; border-top: 1px solid rgba(10,39,53,0.28)">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M13 2L3 14h7l-1 8 11-14h-7l1-6z"></path></svg>
           <div>
             <span class="a-num" style="font-size: 18px; font-weight: 800">۲۰′</span>
-            <span style="font-size: 17px; line-height: 1.7"> — دو یا سه فرصت رشد که از همین ماه شروع می‌شود</span>
+            <span style="font-size: 16px; line-height: 1.7"> — دو یا سه فرصت رشد که از همین ماه شروع می‌شود</span>
           </div>
         </div>
         <div style="display: flex; gap: 16px; padding: 20px 0; border-block: 1px solid rgba(10,39,53,0.28)">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
           <div>
             <span class="a-num" style="font-size: 18px; font-weight: 800">۱۰′</span>
-            <span style="font-size: 17px; line-height: 1.7"> — پیشنهاد شکل همکاری، اگر برای هر دو طرف منطقی بود</span>
+            <span style="font-size: 16px; line-height: 1.7"> — پیشنهاد شکل همکاری، اگر برای هر دو طرف منطقی بود</span>
           </div>
         </div>
       </div>
@@ -752,29 +767,11 @@ textarea.input { min-height: 90px; resize: vertical; }
         <a class="a-link" href="mailto:mehditanekar@gmail.com"><span class="a-num">mehditanekar@gmail.com</span></a>
       </div>
     </div>
-    <div style="max-width: 1280px; margin: 0 auto; padding-top: 24px; padding-inline: 32px; border-top: 1px solid var(--color-divider); font-size: 14px; color: var(--dim)">© ۱۴۰۵ مهدی تنه‌کار · <span class="a-num">mehditanekar.ir</span></div>
+    <div style="max-width: 1280px; margin: 0 auto; padding-top: 24px; padding-inline: 32px; border-top: 1px solid var(--color-divider); font-size: 14px; color: var(--dim); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px">
+      <span>© ۱۴۰۵ مهدی تنه‌کار · <span class="a-num">mehditanekar.ir</span></span>
+      <a class="a-link" href="https://mehrnet.ir" target="_blank" rel="noopener">طراحی و اجرا: شرکت مهرنت</a>
+    </div>
   </footer>
 </div>
-<script>
-(function () {
-  var wrap = document.getElementById('hero-img-wrap');
-  var img = document.getElementById('hero-img');
-  if (!wrap || !img) return;
-  function onScroll() {
-    var rect = wrap.getBoundingClientRect();
-    var vh = window.innerHeight || 800;
-    var progress = Math.max(-1, Math.min(1, (rect.top + rect.height / 2 - vh / 2) / vh));
-    wrap.style.transform = 'translateY(' + (progress * -14) + 'px) rotate(' + (progress * -1.2) + 'deg)';
-    var colorProgress = Math.max(0, Math.min(1, (vh - rect.top - rect.height * 0.35) / (vh * 0.65)));
-    var gray = 1 - colorProgress;
-    var blur = (1 - colorProgress) * 6;
-    var scale = 1.06 - colorProgress * 0.06;
-    img.style.filter = 'grayscale(' + gray + ') blur(' + blur + 'px)';
-    img.style.transform = 'translateY(' + (progress * 22) + 'px) scale(' + (1 + Math.abs(progress) * 0.03) + ') scale(' + scale + ')';
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-})();
-</script>
 </body>
 </html>
