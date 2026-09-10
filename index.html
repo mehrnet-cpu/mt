@@ -302,6 +302,7 @@ textarea.input { min-height: 90px; resize: vertical; }
       .a-header-row { padding: 14px 20px !important; gap: 14px !important; }
       .a-header-row .a-brand { font-size: 15px !important; }
       .a-header-row .a-cta { font-size: 13px !important; padding: 10px 16px !important; }
+      .a-burger { display: flex !important; }
       .a-hero-top { padding-top: 96px !important; }
       .a-pad-lg { padding-top: 64px !important; padding-bottom: 64px !important; }
       .a-pad-lg-x { padding-left: 20px !important; padding-right: 20px !important; }
@@ -327,7 +328,19 @@ textarea.input { min-height: 90px; resize: vertical; }
         <a href="#articles" class="a-link">مقالات</a>
       </nav>
       <a class="a-cta" href="https://wa.me/989126589474" style="background: var(--a1); color: var(--ink); font-size: 14px; font-weight: 700; padding: 12px 22px; border-radius: var(--r-pill); text-decoration: none; white-space: nowrap">رزرو مشاوره</a>
+      <button class="a-burger" onclick="var n=document.getElementById('mobile-menu');n.style.display=n.style.display==='flex'?'none':'flex';" aria-label="منو" style="display: none; align-items: center; justify-content: center; width: 40px; height: 40px; background: transparent; border: 1px solid var(--color-divider); border-radius: 10px; flex-direction: column; gap: 4px; flex-shrink: 0">
+        <span style="width: 18px; height: 2px; background: var(--ink)"></span>
+        <span style="width: 18px; height: 2px; background: var(--ink)"></span>
+        <span style="width: 18px; height: 2px; background: var(--ink)"></span>
+      </button>
     </div>
+    <nav id="mobile-menu" style="display: none; flex-direction: column; padding: 8px 20px 20px; gap: 4px; border-top: 1px solid var(--color-divider)">
+      <a href="#services" class="a-link" onclick="document.getElementById('mobile-menu').style.display='none';" style="padding: 12px 8px; font-size: 15px">خدمات</a>
+      <a href="#case" class="a-link" onclick="document.getElementById('mobile-menu').style.display='none';" style="padding: 12px 8px; font-size: 15px">مطالعه موردی</a>
+      <a href="#method" class="a-link" onclick="document.getElementById('mobile-menu').style.display='none';" style="padding: 12px 8px; font-size: 15px">روش کار</a>
+      <a href="#record" class="a-link" onclick="document.getElementById('mobile-menu').style.display='none';" style="padding: 12px 8px; font-size: 15px">سابقه</a>
+      <a href="#articles" class="a-link" onclick="document.getElementById('mobile-menu').style.display='none';" style="padding: 12px 8px; font-size: 15px">مقالات</a>
+    </nav>
   </header>
 
   <section id="top" class="a-hero-top" style="max-width: 1280px; margin: 0 auto; padding: 168px 32px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 64px; align-items: center">
